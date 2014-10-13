@@ -1,0 +1,1289 @@
+<includes>
+	<include file="defaults.xml" />
+	<include file="ViewsCommon.xml" />
+	<include file="ViewsMetaData.xml" />
+	<include file="ViewsAddonBrowser.xml" />
+	<include file="IncludesCodecFlagging.xml" />
+	<include file="IncludesPlayerControls.xml" />
+	<include file="IncludesHomeRecentlyAdded.xml" />
+	<include file="IncludesKeypad.xml" />
+	<include file="IncludesScripts.xml" />
+
+	<constant name="ScreenWidth">1280</constant>
+	<constant name="ScreenHeight">720</constant>
+	<constant name="FanartCrossfadeTime">500</constant>
+	<constant name="IconCrossfadeTime">400</constant>
+	<constant name="16x9Offset">213</constant>
+
+	<variable name="BannerThumb">
+		<value condition="!IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
+		<value condition="IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Icon]</value>
+	</variable>
+	<variable name="PosterThumb">
+		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Icon]</value>
+	</variable>
+	
+	 <!-- XBMC Logo with fullscreen action when pressed -->
+      <include name="XbmcLogo">
+		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<visible>Window.IsVisible(Home)</visible>
+			<include>VisibleFadeEffect</include>
+			
+			<control type="image">
+				<description>XBMC Logo</description>
+				<posx>10</posx>
+				<posy>1</posy>
+				<width>300</width>
+				<height>70</height>
+				<aspectratio align="left">keep</aspectratio>
+				<texture>xbmc-logo.png</texture>
+			</control>
+			<control type="button">
+				<posx>1</posx>
+				<posy>1</posy>
+				<width>200</width>
+				<height>76</height>
+                <colordiffuse>00FFFFFF</colordiffuse>
+				<onclick>ActivateWindow(1115)</onclick>
+			</control>
+		</control>
+	</include>	
+	
+	<!--<include name="Logo_dc">
+		<control type="image">		
+		<include>Window_OpenClose_Animation_Slide_Down</include>>	
+		<include>VisibleFadeEffect</include>
+			<posx>720</posx>
+			<posy>15</posy>
+			<width>250</width>
+			<height>80</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<texture>logo_dc_small.png</texture>
+		</control>
+	</include>-->	
+		
+	<include name="Time">
+	   <control type="image">		
+		<include>Window_OpenClose_Animation_Slide_Down</include>>	
+		<include>VisibleFadeEffect</include>
+			<posx>450</posx>
+			<posy>0</posy>
+			<width>375</width>
+			<height>75</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<texture>ceas.png</texture>
+		</control>
+		<control type="label">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<description>time label</description>
+			<posx>265</posx>
+			<posy>0</posy>
+			<width>350</width>
+			<height>67</height>
+			<aligny>center</aligny>
+			<align>center</align>
+			<font>font50_title</font>
+			<textcolor>white</textcolor>
+			<label>$INFO[System.Time]</label>
+			<include>VisibleFadeEffect</include>
+			<include>16x9_xPos_Relocation</include>
+		</control>
+		
+	</include>	
+	
+	<!-- weather Info -->
+	<include name="Weather">
+		<control type="group">			
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<visible>[!IsEmpty(Weather.Plugin) + Weather.IsFetched] + !Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonWeather)</visible>
+			<include>VisibleFadeEffect</include>
+			<posx>712</posx>
+			<posy>1</posy>
+			<width>200</width>
+			<height>67</height>
+			<control type="button">
+				<description>Goto Weather button</description>
+				<posx>300</posx>
+				<posy>7</posy>
+				<width>300</width>
+				<height>67</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				<onclick>ActivateWindow(Weather)</onclick>
+			</control>
+			<control type="image">
+				<description>Weather image</description>
+				<posx>474</posx>
+				<posy>0</posy>
+				<width>67</width>
+				<height>67</height>
+				<align>right</align>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">$INFO[Weather.Conditions]</texture>
+			</control>
+			<control type="label">
+				<description>location label</description>
+				<posx>450</posx>
+				<posy>4</posy>
+				<height>37</height>
+				<width>450</width>
+				<label>[B]$INFO[Window(Weather).Property(Location)][/B]</label>
+				<align>right</align>
+				<aligny>center</aligny>
+				<font>font13_title</font>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="grouplist">
+				<posx>0</posx>
+				<posy>45</posy>
+				<width>450</width>
+				<height>26</height>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<itemgap>0</itemgap>
+				<control type="label">
+					<description>Weather label</description>
+					<height>22</height>
+					<width max="400">auto</width>
+					<label>$INFO[Window(Weather).Property(Current.Condition)] </label>
+					<font>font13_title</font>
+					<aligny>center</aligny>
+					<textcolor>white</textcolor>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Temp Label</description>
+					<height>22</height>
+					<width max="400">auto</width>
+					<label>[B]$INFO[Window(Weather).Property(Current.Temperature)][/B]</label>
+					<aligny>center</aligny>
+					<font>font13_title</font>
+					<shadowcolor>black</shadowcolor>
+				</control>
+				<control type="label">
+					<description>Temp Units Label</description>
+					<posy>2</posy>
+					<height>15</height>
+					<width max="200">auto</width>
+					<label>$INFO[System.TemperatureUnits]</label>
+					<font>font13_title</font>
+					<aligny>center</aligny>
+					<shadowcolor>black</shadowcolor>
+					<visible>!IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+		
+	<include name="CommonTopBar">
+		<control type="image">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>80</height>
+			<texture>bara_sus.png</texture>
+		</control>
+	</include>
+	
+	<include name="CommonBottomBar">
+		<control type="image">
+			<include>Window_OpenClose_Animation_Slide_Up</include>
+			<posx>0</posx>
+			<posy>630</posy>
+			<width>ScreenWidth</width>
+			<height>90</height>
+			<texture>bara_jos.png</texture>
+		</control>
+	</include>
+	
+	<include name="MusicPlayerTitle">
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>0</posx>
+            <posy>501</posy>
+           
+            <control type="label">
+                <visible>true</visible>
+                <posx>7</posx>
+                <posy>75</posy>
+                <width>600</width>
+                <height>52</height>
+                <font>font40_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align></align>
+                <aligny>center</aligny>
+                <info>MusicPlayer.Artist</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <posx>13r</posx>
+                <posy>75</posy>
+                <width>600</width>
+                <height>52</height>
+                <font>font40_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <info>MusicPlayer.Title</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+        </control>
+	</include>
+	<include name="RadioStationName">
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>0</posx>
+            <posy>570</posy>
+            <control type="label">
+                <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
+                <posx>10</posx>
+                <posy>0</posy>
+                <width>800</width>
+                <height>70</height>
+                <font>font50_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align></align>
+                <aligny>center</aligny>
+                <label>$INFO[Window(Home).Property(Radio.Frequency)]</label>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+            <control type="label">
+                <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
+                <posx>10r</posx>
+                <posy>0</posy>
+                <width>800</width>
+                <height>70</height>
+                <font>font50_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <!--<info>MusicPlayer.Title</info>-->
+                <label>$INFO[Window(Home).Property(Radio.StationName)]</label>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+        </control>
+	</include>
+	
+	<include name="CommonBackground">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<aspectratio>scale</aspectratio>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<texture fallback="special://skin/background/SKINDEFAULT.jpg">special://skin/background/$INFO[Skin.CurrentTheme].jpg</texture>
+		</control>
+		<!--<include>CommonHeader</include>-->
+	</include>
+	<!--<include name="CommonBackgroundOverlay">
+		<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>ScreenWidth</width>
+				<height>150</height>
+				<texture>shelf_shadow.png</texture>
+			</control>
+	</include>-->
+    <include name="BottomNowPLaying">
+        <control type="group">
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>0</posx>
+            <posy>100r</posy>
+            <visible>Player.HasAudio | Player.HasVideo</visible>
+            <!-- Bottom Overlay -->
+            <control type="image">
+                    <posx>0</posx>
+                    <posy>30</posy>
+                    <width>ScreenWidth</width>
+                    <height>71</height>
+                    <!--<texture>black.png</texture>-->
+                    <colordiffuse>bbffffff</colordiffuse>
+            </control>
+            <control type="image">
+                    <posx>0</posx>
+                    <posy>30</posy>
+                    <width>ScreenWidth</width>
+                    <height>-50</height>
+                    <!--<texture>shelf_shadow.png</texture>-->
+            </control>
+            
+            <include>CommonNowPlaying</include>
+            <include>CommonVolumeBottom</include>
+            <include>PlayerControlsAll</include>
+        </control>
+    </include>
+        
+	<include name="CommonVolumeBottom">
+		<control type="group">
+			<visible>Player.HasMedia</visible>
+			<posx>15</posx>
+			<posy>15</posy>
+			<control type="label">
+				<description>label</description>
+				<posx>7</posx>
+				<posy>0</posy>
+				<height>37</height>
+				<width>150</width>
+				<label>13376</label>
+				<font>font24_title</font>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="label">
+				<description>Volumelabel</description>
+				<posx>334</posx>
+				<posy>0</posy>
+				<height>37</height>
+				<width>150</width>
+				<label>$INFO[Control.GetLabel(1)]</label>
+				<font>font24_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+			</control>
+			<control type="progress" id="2">
+				<description>Volume</description>
+				<posx>0</posx>
+				<posy>41</posy>
+				<width>337</width>
+				<height>37</height>
+				<info>Player.Volume</info>
+			</control>
+			<control type="slider" id="1">
+				<description>Volume Slider</description>
+				<posx>0</posx>
+				<posy>41</posy>
+				<width>337</width>
+				<height>37</height>
+ 				<info>Player.Volume</info>
+				<action>Volume</action>
+				<texturesliderbar>OSDProgressBack2.png</texturesliderbar>
+				<textureslidernib>OSDSliderNib.png</textureslidernib>
+				<textureslidernibfocus>OSDSliderNib.png</textureslidernibfocus>
+			</control>
+		</control>
+	</include>
+	<include name="BottomSeekPlayback">
+		<control type="group">
+			<posx>0</posx>
+			<posy>600</posy>
+			<visible>Player.HasAudio | Player.HasVideo</visible>
+			<control type="label">
+				<posx>180</posx>
+				<posy>0</posy>
+				<width>135</width>
+				<height>24</height>
+				<font>font10_title</font>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Player.Time(hh:mm:ss)]</label>
+			</control>
+			<control type="label">
+				<posx>240r</posx>
+				<posy>0</posy>
+				<width>135</width>
+				<height>24</height>
+				<font>font10_title</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<posx>150</posx>
+				<posy>0</posy>
+				<width>979</width>
+				<height>9</height>
+				<info>Player.Progress</info>
+				<texturebg flipy="true" border="10,0,10,0">HeaderProgressBack.png</texturebg>
+				<midtexture flipy="true" border="10,0,10,0">HeaderProgressFront.png</midtexture>
+			</control>
+			<control type="slider" id="87">
+				<description>Seek Slider</description>
+				<posx>150</posx>
+				<posy>-5</posy>
+				<width>979</width>
+				<height>15</height>
+				<action>seek</action>
+				<texturesliderbar>OSDProgressBack2.png</texturesliderbar>
+				<textureslidernib>OSDSliderNib.png</textureslidernib>
+				<textureslidernibfocus>OSDSliderNib.png</textureslidernibfocus>
+			</control>
+		</control>
+	</include>
+	
+	<include name="CommonAudioVideoTitle">
+        <control type="group">
+            <posx>0</posx>
+            <posy>0</posy>
+            <control type="label">
+                <visible>true</visible>
+                <posx>0r</posx>
+                <posy>0</posy>
+                <width>ScreenWidth</width>
+                <height>52</height>
+                <font>font40_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <info>MusicPlayer.Artist</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <posx>0r</posx>
+                <posy>37</posy>
+                <width>ScreenWidth</width>
+                <height>52</height>
+                <font>font40_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <info>MusicPlayer.Title</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <posx>0r</posx>
+                <posy>0</posy>
+                <width>ScreenWidth</width>
+                <height>52</height>
+                <font>font40_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <info>VideoPlayer.Artist</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+            <control type="label">
+                <visible>true</visible>
+                <posx>0r</posx>
+                <posy>37</posy>
+                <width>ScreenWidth</width>
+                <height>70</height>
+                <font>font30_title</font>
+                <textcolor>white</textcolor>
+                <selectedcolor>selected</selectedcolor>
+                <align>right</align>
+                <aligny>center</aligny>
+                <info>VideoPlayer.Title</info>
+                <scrollspeed>50</scrollspeed>
+                <scrollsuffix> - </scrollsuffix>
+            </control>
+        </control>
+	</include>
+	<include name="PlayerControlsAll">
+		<control type="group" id="100">
+			<visible>Player.HasAudio | Player.HasVideo</visible>
+			<posx>204</posx>
+			<posy>11</posy>
+			<include>16x9_xPos_Relocation</include>
+			<control type="button" id="600">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<label>157</label>
+				<font>-</font>
+				<texturefocus>OSDPrevTrackFO.png</texturefocus>
+				<texturenofocus>OSDPrevTrackNF.png</texturenofocus>
+				<onleft>529</onleft>
+				<onright>451</onright>
+				<onup>750</onup>
+				<ondown>750</ondown>
+				<onclick>PlayerControl(Previous)</onclick>
+			</control>
+			<control type="togglebutton" id="602">
+				<posx>90</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<label>31351</label>
+				<altlabel>208</altlabel>
+				<font>-</font>
+				<texturefocus>OSDPauseFO.png</texturefocus>
+				<texturenofocus>OSDPauseNF.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus>OSDPlayFO.png</alttexturefocus>
+				<alttexturenofocus>OSDPlayNF.png</alttexturenofocus>
+				<onleft>601</onleft>
+				<onright>603</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onclick>PlayerControl(Play)</onclick>
+			</control>
+			<control type="button" id="603">
+				<posx>180</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<label>31352</label>
+				<font>-</font>
+				<texturefocus>OSDStopFO.png</texturefocus>
+				<texturenofocus>OSDStopNF.png</texturenofocus>
+				<onleft>602</onleft>
+				<onright>604</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+			<control type="button" id="605">
+				<posx>270</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<label>209</label>
+				<font>-</font>
+				<texturefocus>OSDNextTrackFO.png</texturefocus>
+				<texturenofocus>OSDNextTrackNF.png</texturenofocus>
+				<onleft>604</onleft>
+				<onright>701</onright>
+				<onup>1000</onup>
+				<ondown>1000</ondown>
+				<onclick>PlayerControl(Next)</onclick>
+			</control>
+		</control>
+	</include>
+	
+	
+	
+	<include name="BehindDialogFadeOut">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>ScreenWidth</width>
+			<height>ScreenHeight</height>
+			<texture>black-back.png</texture>
+			<animation effect="fade" time="400">Visible</animation>
+			<animation effect="fade" time="200">Hidden</animation>
+			<visible>Window.IsActive(ContextMenu) | Window.IsActive(MovieInformation) | Window.IsActive(MusicInformation) | Window.IsActive(SongInformation) | Window.IsActive(FileBrowser) | Window.IsActive(TextViewer) | Window.IsActive(AddonSettings) | Window.IsActive(ContentSettings) | Window.IsActive(SelectDialog) | Window.IsActive(FileStackingDialog) | Window.IsActive(MediaSource) | Window.IsActive(PictureInfo) | [Window.IsActive(NumericInput) + !Window.IsVisible(VirtualKeyboard)] | Window.IsActive(ProfileSettings) | Window.IsActive(LockSettings) | Window.IsActive(SmartPlaylistEditor) | Window.IsActive(SmartPlaylistRule) | Window.IsActive(script-RSS_Editor-rssEditor.xml) | Window.IsActive(script-RSS_Editor-setEditor.xml) | Window.IsActive(AddonInformation) | Window.IsActive(Favourites) | Window.IsActive(PictureInfo) | Window.IsActive(KaraokeLargeSelector) | Window.IsActive(custom_skinsettings_1113.xml) | Window.IsActive(Peripherals) | Window.IsActive(PeripheralSettings) | Window.IsActive(MediaFilter)</visible>
+		</control>
+	</include>
+	<include name="MediaWindowTitleCommons">
+		<posx>79</posx>
+		<posy>25</posy>
+		<width>669</width>
+		<height>28</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font30_title</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+		<scroll>false</scroll>
+		<include>Window_OpenClose_Animation_Slide_Down</include>
+	</include>
+	<include name="WindowTitleCommons">
+		<height>45</height>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<textcolor>white</textcolor>
+		<shadowcolor>black</shadowcolor>
+	</include>
+	<include name="FileCountCommons">
+		<control type="group">
+			<posx>7</posx>
+			<posy>15</posy>
+			<visible>!Window.IsVisible(ExtendedProgressDialog)</visible>
+			<!--<include>Window_OpenClose_Animation</include>-->
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<control type="image">
+				<posx>150r</posx>
+				<posy>0</posy>
+				<width>60</width>
+				<height>60</height>
+				<aspectratio>keep</aspectratio>
+				<texture>filecount.png</texture>
+			</control>
+			<control type="label">
+				<description>Page Count Label 1</description>
+				<posx>157r</posx>
+				<posy>9</posy>
+				<width>375</width>
+				<height>15</height>
+				<font>font16</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window.Property(filter),$LOCALIZE[587] , - ]$INFO[Container.NumItems,, $LOCALIZE[31025]]</label>
+			</control>
+			<control type="label">
+				<description>Page Count Label 2</description>
+				<posx>157r</posx>
+				<posy>31</posy>
+				<width>375</width>
+				<height>15</height>
+				<font>font16</font>
+				<textcolor>white</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<scroll>false</scroll>
+				<align>right</align>
+				<aligny>center</aligny>
+				<label>$INFO[Container.CurrentPage,$LOCALIZE[31024] ]$INFO[Container.NumPages, of ,]</label>
+			</control>
+		</control>
+	</include>
+	<include name="ScrollBarCommons">
+		<control type="group">
+			<!--<include>Window_OpenClose_Animation</include>-->
+			<animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<posx>75r</posx>
+			<posy>80</posy>
+			<visible>Control.IsVisible(60)</visible>
+			<animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
+			<animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
+			<control type="image">
+				<description>Scroll Bar Background Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>550</height>
+				<texture border="0,60,0,60">ScrollBarBackground.png</texture>
+				<colordiffuse>50FFFFFF</colordiffuse>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>15</posx>
+				<posy>30</posy>
+				<width>37</width>
+				<height>480</height>
+				<texturesliderbackground border="0,14,0,14">special://skin/media/linie_albastra_v.png</texturesliderbackground>
+				<texturesliderbar border="0,14,0,14">osdslidernib.png</texturesliderbar>
+				<texturesliderbarfocus border="0,14,0,14">osdslidernib.png</texturesliderbarfocus>
+				<textureslidernib></textureslidernib>
+				<textureslidernibfocus></textureslidernibfocus>
+				<onleft>60</onleft>
+				<onright>60</onright>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<orientation>vertical</orientation>
+				<animation effect="fade" time="150">Visible</animation>
+				<animation effect="fade" time="150">Hidden</animation>
+			</control>
+		</control>
+	</include>
+	<include name="HomeButtonCommons">
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<posx>0</posx>
+			<posy>0</posy>
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Home Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<font>-</font>
+				<texturenofocus border="5">floor_button_t.png</texturenofocus>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<onclick>ActivateWindow(Home)</onclick>
+			</control>
+			<control type="image">
+				<description>Home Button Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>icon_home.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="OptionsButtonCommons">
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<posx>75r</posx>
+			<posy>1</posy>
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Options Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<font>-</font>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<onclick>Skin.ToggleSetting(MediaSubMenuVisible)</onclick>
+			</control>
+			<control type="image">
+				<description>Options Button Image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_system.png</texture>
+			</control>
+		</control>
+	</include>
+	<include name="DialogCloseButtonCommons">
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>2</width>
+			<height>40</height>
+			<texture>header-divide.png</texture>
+		</control>
+		<control type="button">
+			<description>Close Button</description>
+			<posx>5</posx>
+			<posy>0</posy>
+			<width>45</width>
+			<height>45</height>
+			<font>-</font>
+			<onclick>back</onclick>
+			<texturefocus>icon_close.png</texturefocus>
+			<texturenofocus>icon_close.png</texturenofocus>
+		</control>
+	</include>
+	<include name="MediaSubMenu">
+		<control type="button" id="19">
+			<description>Filter button needed for panel below to work</description>
+			<visible>false</visible>
+		</control>
+		<control type="panel" id="9002">
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>Window_OpenClose_Animation_Slide_Up</include>
+			<include>SubMenuCommonLayout</include>
+			<content>
+				<item>
+					<label>1036</label>
+					<onclick>ActivateWindow(1115)</onclick>
+					<icon>arrow-big-up.png</icon>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_filter_w.png</icon>
+					<visible>!Container.Filtered</visible>
+				</item>
+				<item>
+					<label>587</label>
+					<onclick condition="!Container.CanFilterAdvanced">SendClick(19)</onclick>
+					<onclick condition="Container.CanFilterAdvanced">Filter</onclick>
+					<icon>icon_filter_on_w.png</icon>
+					<visible>Container.Filtered</visible>
+				</item>
+				<item>
+					<label>31202</label>
+					<onclick>Container.NextViewMode</onclick>
+					<icon>icon_view_w.png</icon>
+				</item>
+				
+				<item>
+					<label>31200</label>
+					<onclick>ParentDir</onclick>
+					<icon>icon_back_w.png</icon>
+				</item>
+				
+			</content>
+		</control>
+	</include>
+    
+    
+		<include name="MediaBladeLeft">
+		<control type="group">
+			<animation effect="slide" start="-200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="-200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+			<posx>0</posx>
+			<posy>80</posy>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>70</width>
+				<height>550</height>
+				<texture border="0,60,0,60">ScrollBarBackground_l.png</texture>
+				<colordiffuse>50FFFFFF</colordiffuse>
+			</control>
+			<control type="group" >
+				<posx>0</posx>
+				<posy>37</posy>
+				<width>75</width>
+				<height>451</height>
+				<onleft>-</onleft>
+				<onright>-</onright>
+				<onup>-</onup>
+				<ondown>-</ondown>
+				<pagecontrol>-</pagecontrol>
+				<scrolltime>-</scrolltime>
+				<orientation>vertical</orientation>
+				
+			<control type="button">
+				<description>Music</description>
+				<posx>0</posx>
+				<posy>8</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus></texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>ActivateWindow(Music)</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>8</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>music2.png</texture>
+			</control>
+				<control type="button">
+				<description>video</description>
+				<posx>0</posx>
+				<posy>85</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>ActivateWindow(Videos)</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>85</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>video2.png</texture>
+			</control>
+			<control type="button">
+				<description>Pictures</description>
+				<posx>0</posx>
+				<posy>162</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>ActivateWindow(Pictures)</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>162</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>pictures2.png</texture>
+			</control>
+			<control type="button">
+				<description>Radio</description>
+				<posx>0</posx>
+				<posy>239</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>RunScript("plugin.program.radioFM")</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>239</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>radio2.png</texture>
+			</control>
+			<control type="button">
+				<description>Navit</description>
+				<posx>0</posx>
+				<posy>316</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>RunScript("plugin.program.navigation")</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>316</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>navit_logo2.png</texture>
+			</control>
+			<control type="button">
+				<description>Programs</description>
+				<posx>0</posx>
+				<posy>393</posy>
+				<width>70</width>
+				<height>70</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>button-focus2.png</texturefocus>
+				<onclick>ActivateWindow(Programs)</onclick>
+			</control>
+			<control type="image">				
+				<posx>0</posx>
+				<posy>393</posy>
+				<width>70</width>
+				<height>70</height>
+				<texture>programs2.png</texture>
+			</control>
+			<control type="image">
+						<posx>0</posx>
+						<posy>5</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>82</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>159</posy>
+						<width>67</width>
+						<height>2</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>236</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>313</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>390</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+					<control type="image">
+						<posx>0</posx>
+						<posy>468</posy>
+						<width>67</width>
+						<height>1</height>
+						<texture>special://skin/media/linie_albastra.png</texture>
+					</control>
+			
+			</control>
+		</control>
+	</include>
+	
+<include name="SubMenuCommonLayout">
+		<include>Window_OpenClose_Animation_Slide_Up</include>
+        <animation effect="slide" start="0,0" end="-15,0" time="0" condition="StringCompare(Container(9002).NumItems,5)">conditional</animation>
+		<animation effect="slide" start="0,0" end="84,0" time="0" condition="StringCompare(Container(9002).NumItems,4)">conditional</animation>
+		<animation effect="slide" start="0,0" end="168,0" time="0" condition="StringCompare(Container(9002).NumItems,3)">conditional</animation>
+		<animation effect="slide" start="0,0" end="274,0" time="0" condition="StringCompare(Container(9002).NumItems,2)">conditional</animation>
+		<animation effect="slide" start="0,0" end="375,0" time="0" condition="StringCompare(Container(9002).NumItems,1)">conditional</animation>
+		<posx>465r</posx>
+		<posy>90r</posy>
+		<width>960</width>
+		<height>90</height>
+		<onleft>9002</onleft>
+		<onright>9002</onright>
+		<onup>9001</onup>
+		<ondown>20</ondown>
+		<pagecontrol>-</pagecontrol>
+		<scrolltime>300</scrolltime>
+		<orientation>Horizontal</orientation>
+		<itemlayout height="97" width="97">
+			<control type="image">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<!--CommonBottom-->
+				<texture border="4">floor_button_t.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<!--<bordertexture border="5">floor_buttonfo.png</bordertexture>-->
+				<bordersize>12</bordersize>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+		</itemlayout>
+		<focusedlayout height="97" width="97">
+			<control type="image">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<texture border="4">floor_buttonfo.png</texture>
+			</control>
+			<control type="image">
+				<posx>0</posx>
+				<posy>4</posy>
+				<width>82</width>
+				<height>82</height>
+				<!--<bordertexture border="5">IconBack-focus.png</bordertexture>-->
+				<bordersize>12</bordersize>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+		</focusedlayout>
+	</include>
+	
+	<include name="ButtonHomeSubCommonValues">
+		<height>50</height>
+		<width>200</width>
+		<textwidth>190</textwidth>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font10</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<texturefocus border="5">HomeSubFO.png</texturefocus>
+		<texturenofocus border="5">HomeSubNF.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+		<textureradioon>HomeTab-focus.png</textureradioon>
+		<textureradiooff>-</textureradiooff>
+		<radioposx>5</radioposx>
+		<radioposy>43</radioposy>
+		<radiowidth>190</radiowidth>
+		<radioheight>5</radioheight>
+	</include>
+	<include name="ButtonCommonValues2">
+		<height>60</height>
+		<width>298</width>
+		<textoffsetx>10</textoffsetx>
+		<textwidth>280</textwidth>
+		<textcolor>black</textcolor>
+		<align>left</align>
+		<aligny>center</aligny>
+		<font>font13</font>
+		<texturefocus>button-focus2.png</texturefocus>
+		<texturenofocus>button-nofocus.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="ButtonInfoDialogsCommonValues">
+		<height>50</height>
+		<width>158</width>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font>font12_title</font>
+		<texturefocus border="5">IconBack-focus.png</texturefocus>
+		<texturenofocus border="5">ListNF.png</texturenofocus>
+		<pulseonselect>false</pulseonselect>
+	</include>
+	<include name="CommonNowPlaying">
+		<!--<control type="group">
+			<posx>220</posx>
+			<posy>700</posy>
+			<visible>Player.HasMedia + !Window.IsVisible(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>270</width>
+				<height>67</height>
+				<texturefocus border="8">IconBack.png</texturefocus>
+				<texturenofocus border="8">IconBack.png</texturenofocus>
+				<onclick>ActivateWindow(PlayerControls)</onclick>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>$LOCALIZE[31040]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10_title</font>
+				<textcolor>black</textcolor>
+				<visible>!Player.Paused</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>5</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>$LOCALIZE[31043]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10_title</font>
+				<textcolor>black</textcolor>
+				<visible>Player.Paused</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>24</posy>
+				<width>250</width>
+				<height>20</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[MusicPlayer.Title]$INFO[VideoPlayer.Title][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font12</font>
+				<textcolor>black</textcolor>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>45</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[MusicPlayer.Artist][/B]</label>
+				<label>[B]$INFO[MusicPlayer.Album][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>black</textcolor>
+				<visible>Player.HasAudio</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>45</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[VideoPlayer.Studio][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>black</textcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Movies)</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>45</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[VideoPlayer.TVShowTitle][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>black</textcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(Episodes)</visible>
+			</control>
+			<control type="fadelabel">
+				<posx>10</posx>
+				<posy>45</posy>
+				<width>250</width>
+				<height>15</height>
+				<scrollout>false</scrollout>
+				<pauseatend>3000</pauseatend>
+				<label>[B]$INFO[VideoPlayer.Artist][/B]</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font10</font>
+				<textcolor>black</textcolor>
+				<visible>Player.HasVideo + VideoPlayer.Content(MusicVideos)</visible>
+			</control>
+		</control>-->  
+	</include>
+	<include name="ScrollOffsetLabel">
+		<control type="group">
+			<include>16x9_xPos_Relocation</include>
+			<visible>Container.Scrolling + [StringCompare(Container.SortMethod,$LOCALIZE[551]) | StringCompare(Container.SortMethod,$LOCALIZE[561]) | StringCompare(Container.SortMethod,$LOCALIZE[558]) | StringCompare(Container.SortMethod,$LOCALIZE[557]) | StringCompare(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<animation effect="fade" time="100">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+			<posx>600</posx>
+			<posy>410</posy>
+			<width>320</width>
+			<control type="image">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture border="5">IconBack.png</texture>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>80</width>
+				<height>80</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>[B]$INFO[ListItem.SortLetter][/B]</label>
+				<textcolor>black</textcolor>
+				<font>font30</font>
+			</control>
+		</control>
+	</include>
+	
+
+	
+	<include name="Window_OpenClose_Animation_Slide_Up">
+			<animation effect="slide" start="0,200" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,200" time="500" tween="quadratic" easing="out">WindowClose</animation>
+	</include>
+	
+	<include name="Window_OpenClose_Animation_Slide_Down">
+			<animation effect="slide" start="0,-200" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+			<animation effect="slide" start="0,0" end="0,-200" time="500" tween="quadratic" easing="out">WindowClose</animation>
+	</include>
+	
+	<include name="16x9_xPos_Relocation">
+		<animation effect="slide" start="0,0" end="16x9Offset,0" time="0" condition="true">conditional</animation>
+	</include>
+	<include name="Window_OpenClose_Animation">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+		
+	</include>
+	<include name="Window_OpenClose_Animation_Zoom">
+			<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="10" end="100" center="640,480" easing="out" tween="back" time="300" />
+			<effect type="fade" start="0" end="100" time="200" />			
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="10" center="640,480" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="200" />
+		</animation>
+	</include>
+    <include name="Window_OpenClose_Animation_Zoom_Reverted">
+		<animation type="WindowClose" reversible="false">
+			<!--<effect type="zoom" start="10" end="100" center="950,555" easing="in" tween="back" time="800" />-->
+			<effect type="fade" start="0" end="100" time="500" />
+		</animation>
+		<animation type="WindowOpen" reversible="false">
+			<!--<effect type="zoom" start="100" end="1" center="950,555" easing="out" tween="back" time="800" />-->
+			<effect type="fade" start="100" end="0" time="500" />
+		</animation>
+	</include>
+	<include name="dialogeffect">
+		<animation effect="fade" time="250">WindowOpen</animation>
+		<animation effect="fade" time="250">WindowClose</animation>
+	</include>
+	<include name="VisibleFadeEffect">
+		<animation effect="fade" time="300">Visible</animation>
+		<animation effect="fade" time="300">Hidden</animation>
+	</include>
+</includes>

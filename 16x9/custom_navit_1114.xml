@@ -1,0 +1,45 @@
+<window id="1114">
+	<defaultcontrol always="true">50</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<views>50,500</views>
+	<onunload>Skin.Reset(MediaSubMenuVisible)</onunload>
+	<controls>
+	 	<!-- Redirect clicks to X11 window -->
+        <!--<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<control type="button">
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>ScreenWidth</width>
+				<height>ScreenHeight</height>
+				<font>-</font>
+                <colordiffuse>00FFFFFF</colordiffuse>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
+				<onclick>RunScript("special://skin/scripts/navigation_click.py")</onclick>
+			</control>
+		</control>-->
+        
+        <!-- Background fading -->
+        <control type="group">
+            <include>Window_OpenClose_Animation_Zoom_Reverted</include>
+            <include>CommonBackground</include>
+        </control>
+        
+        <!-- Media controls -->
+        <!--<include>BottomNowPLaying</include>-->
+        
+        <!-- Bottom Right Controls -->
+        <!--<control type="panel" id="9002">
+			<include>SubMenuCommonLayout</include>
+			<content>
+                <item>
+					<onclick>ParentDir</onclick>
+					<icon>icon_back_w.png</icon>
+				</item>
+			</content>
+		</control>-->
+        
+	</controls>
+</window>

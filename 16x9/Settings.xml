@@ -1,0 +1,396 @@
+<window id="4">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<allowoverlay>no</allowoverlay>
+	<controls>
+		
+		<include>CommonBackground</include>
+		<include>CommonTopBar</include>
+		<include>CommonBottomBar</include>
+		<!--<include>CommonBackgroundOverlay</include>-->
+		<include>HomeButtonCommons</include>
+		<!--<include>MeniuMediaBarLeft</include>-->
+		<!--<include>MediaBladeLeft</include>-->
+        <include>BottomNowPLaying</include>
+        <include>Logo_dc</include>
+      
+		<control type="group">
+			<include>Window_OpenClose_Animation_Slide_Down</include>
+			<posx>500r</posx>
+			<posy>0</posy>
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Home Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>500</width>
+				<height>80</height>
+				<font>-</font>
+				<texturenofocus>floor_button_t.png</texturenofocus>
+				<texturefocus>floor_buttonFO.png</texturefocus>
+				<onclick>RunScript("plugin.program.carpcupdater")</onclick>
+			</control>
+			<control type="label">
+				<description>System Update</description>
+				<posx>0</posx>
+				<posy>-15</posy>
+				<height>80</height>
+				<width>500</width>
+				<label>System Update</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font50_title</font>
+				<textcolor>FFFFFFF0</textcolor>	
+			</control>
+		</control>
+
+      <control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>165</posx>
+			<posy>88</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Appearance</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(AppearanceSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Appearance</description>
+				<posx>37</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_appearence.png</texture>
+			</control>
+			<control type="label">
+				<description>Appearance</description>
+				<posx>110</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Appearance</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		    <include>Window_OpenClose_Animation_Zoom</include>
+			<posx>165</posx>
+			<posy>223</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Music</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(MusicSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Music</description>
+				<posx>37</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_music.png</texture>
+			</control>
+			<control type="label">
+				<description>Music</description>
+				<posx>180</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Music</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>165</posx>
+			<posy>358</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Weather</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(WeatherSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Weather</description>
+				<posx>37</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_weather.png</texture>
+			</control>
+			<control type="label">
+				<description>Weather</description>
+				<posx>146</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Weather</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>165</posx>
+			<posy>493</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Services</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_l.png</texturenofocus>
+				<texturefocus>settings_l_p.png</texturefocus>
+				<onclick>ActivateWindow(ServiceSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Services</description>
+				<posx>37</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_network.png</texture>
+			</control>
+			<control type="label">
+				<description>Services</description>
+				<posx>150</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Services</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+
+        <control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>652</posx>
+			<posy>88</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Video</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(VideosSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Video</description>
+				<posx>337</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_video.png</texture>
+			</control>
+			<control type="label">
+				<description>Video</description>
+				<posx>75</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Video</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>652</posx>
+			<posy>223</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Pictures</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(PicturesSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>Pictures</description>
+				<posx>337</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_pictures.png</texture>
+			</control>
+			<control type="label">
+				<description>Pictures</description>
+				<posx>75</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Pictures</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>652</posx>
+			<posy>358</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>Add-ons</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(AddonBrowser)</onclick>
+			</control>
+			<control type="image">
+				<description>Add-ons</description>
+				<posx>337</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_addons.png</texture>
+			</control>
+			<control type="label">
+				<description>Add-ons</description>
+				<posx>75</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>Add-ons</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+		
+		<control type="group">
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>652</posx>
+			<posy>493</posy>
+			<include>VisibleFadeEffect</include>
+			<control type="button">
+				<description>System</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>459</width>
+				<height>123</height>
+				<font>-</font>
+				<texturenofocus >settings_r.png</texturenofocus>
+				<texturefocus>settings_r_p.png</texturefocus>
+				<onclick>ActivateWindow(SystemSettings)</onclick>
+			</control>
+			<control type="image">
+				<description>System</description>
+				<posx>337</posx>
+				<posy>22</posy>
+				<width>75</width>
+				<height>75</height>
+				<texture>icon_big_system.png</texture>
+			</control>
+			<control type="label">
+				<description>System</description>
+				<posx>75</posx>
+				<posy>0</posy>
+				<height>112</height>
+				<width>300</width>
+				<label>System</label>
+				<align>left</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>		
+			</control>
+		</control>
+
+		<control type="label">
+			<description>Window label</description>
+			<include>MediaWindowTitleCommons</include>
+			<label>$LOCALIZE[5]</label>
+		</control>
+		<control type="panel" id="9002">
+			<visible>!Window.IsActive(PlayerControls)</visible>
+			<include>VisibleFadeEffect</include>
+			<include>SubMenuCommonLayout</include>
+			<content>
+				<!--<item>
+					<label></label>
+					<onclick>ReloadSkin</onclick>
+					<icon>icon_refresh_w.png</icon>
+				</item>-->
+				<!--<item>
+					<label>13200</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>icon_profile_w.png</icon>
+				</item>-->
+				<!--<item>
+					<label>20077</label>
+					<onclick>ActivateWindow(1113)</onclick>
+					<icon>icon_skin_w.png</icon>
+				</item>-->
+				<item>
+					<label>130</label>
+					<onclick>ActivateWindow(SystemInfo)</onclick>
+					<icon>icon_systeminfo_w.png</icon>
+				</item>
+				<item>
+					<label>1036</label>
+					<onclick>ActivateWindow(Favourites)</onclick>
+					<icon>icon_favourites_w.png</icon>
+				</item>
+				<item>
+					<label>31200</label>
+					<onclick>Back</onclick>
+					<icon>icon_back_w.png</icon>
+				</item>
+			</content>
+		</control>
+		
+		<include>BehindDialogFadeOut</include>
+	</controls>
+</window>

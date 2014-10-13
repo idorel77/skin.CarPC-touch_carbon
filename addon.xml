@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+  id="skin.CarPC-touch_carbon"
+  version="3.0.0"
+  name="CarPC-touch_carbon"
+  provider-name="Dorel">
+  <requires>
+    <import addon="xbmc.gui" version="5.0.0"/>
+  </requires>
+  <extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false">
+    <res width="1280" height="720" aspect="16:9" folder="16x9" />
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">CarPC touch screen skin</summary>
+    <description lang="en">The skin is based on re-Touched skin(Jezz_X) modified by Dorel</description>
+    <disclaimer lang="en">Use this skin with a touch screen or a mouse(the pointer is not being shown)</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>

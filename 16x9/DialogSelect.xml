@@ -1,0 +1,275 @@
+<window type="dialog" id="2000">
+	<defaultcontrol always="true">3</defaultcontrol>
+	<include>16x9_xPos_Relocation</include>
+	<include>Window_OpenClose_Animation_Zoom</include>
+	<coordinates>
+		<system>1</system>
+		<posx>214</posx>
+		<posy>60</posy>
+	</coordinates>
+	<controls>
+		<control type="image">
+			<description>Shadow Background for dialogs without BehindDialogFadeOut include</description>
+			<posx>-22</posx>
+			<posy>-22</posy>
+			<width>577</width>
+			<height>645</height>
+			<texture border="22">DialogShadow.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>532</width>
+			<height>45</height>
+			<texture border="4">DialogHeader.png</texture>
+		</control>
+		<control type="image">
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>532</width>
+			<height>570</height>
+			<texture border="4">DialogBack.png</texture>
+		</control>
+		<control type="label" id="1">
+			<description>header label</description>
+			<posx>15</posx>
+			<posy>0</posy>
+			<include>WindowTitleCommons</include>
+			<width>450</width>
+			<label>$LOCALIZE[13406]</label>
+		</control>
+		<control type="group">
+			<posx>480</posx>
+			<posy>0</posy>
+			<include>DialogCloseButtonCommons</include>
+		</control>
+		<control type="list" id="3">
+			<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(60)">Conditional</animation>
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>360</width>
+			<height>487</height>
+			<onup>3</onup>
+			<ondown>3</ondown>
+			<onleft>5</onleft>
+			<onright>61</onright>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="45" width="510">
+				<control type="image">
+					<posx>0</posx>
+					<posy>-2</posy>
+					<width>510</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>480</width>
+					<height>45</height>
+					<font>font10</font>
+					<textcolor>black</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="45" width="510">
+				<control type="image">
+					<posx>0</posx>
+					<posy>-2</posy>
+					<width>510</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>0</posy>
+					<width>480</width>
+					<height>45</height>
+					<font>font10</font>
+					<textcolor>black</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="45">
+			<posx>510</posx>
+			<posy>45</posy>
+			<width>22</width>
+			<height>487</height>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<onleft>3</onleft>
+			<onright>3</onright>
+			<ondown>60</ondown>
+			<onup>60</onup>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" time="150">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+			<visible>Control.IsVisible(3)</visible>
+		</control>
+		<control type="list" id="6">
+			<animation effect="slide" start="0,0" end="10,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
+			<posx>0</posx>
+			<posy>45</posy>
+			<width>510</width>
+			<height>487</height>
+			<onup>6</onup>
+			<ondown>6</ondown>
+			<onleft>5</onleft>
+			<onright>61</onright>
+			<pagecontrol>61</pagecontrol>
+			<scrolltime>200</scrolltime>
+			<itemlayout height="75" width="510">
+				<control type="image">
+					<posx>0</posx>
+					<posy>-2</posy>
+					<width>510</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>4</posy>
+					<width>412</width>
+					<height>22</height>
+					<font>font12</font>
+					<textcolor>black</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="textbox">
+					<posx>22</posx>
+					<posy>23</posy>
+					<width>405</width>
+					<height>45</height>
+					<font>font11</font>
+					<textcolor>black</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+				</control>
+				<control type="image">
+					<posx>435</posx>
+					<posy>4</posy>
+					<width>75</width>
+					<height>67</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<bordertexture>ThumbBorderGrey.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+			</itemlayout>
+			<focusedlayout height="75" width="510">
+				<control type="image">
+					<posx>0</posx>
+					<posy>-2</posy>
+					<width>510</width>
+					<height>4</height>
+					<texture>separator.png</texture>
+				</control>
+				<control type="label">
+					<posx>15</posx>
+					<posy>4</posy>
+					<width>412</width>
+					<height>22</height>
+					<font>font12</font>
+					<textcolor>black</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.Label][/B]</label>
+				</control>
+				<control type="textbox">
+					<posx>22</posx>
+					<posy>26</posy>
+					<width>405</width>
+					<height>45</height>
+					<font>font11</font>
+					<textcolor>black</textcolor>
+					<align>left</align>
+					<label>$INFO[ListItem.Property(Addon.Summary)]</label>
+				</control>
+				<control type="image">
+					<posx>435</posx>
+					<posy>4</posy>
+					<width>75</width>
+					<height>67</height>
+					<texture>$INFO[Listitem.Icon]</texture>
+					<bordertexture>ThumbBorderGrey.png</bordertexture>
+					<bordersize>2</bordersize>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="61">
+			<posx>510</posx>
+			<posy>45</posy>
+			<width>22</width>
+			<height>487</height>
+			<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
+			<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
+			<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>
+			<textureslidernib>ScrollBarNib.png</textureslidernib>
+			<textureslidernibfocus>ScrollBarNib.png</textureslidernibfocus>
+			<onleft>6</onleft>
+			<onright>6</onright>
+			<ondown>61</ondown>
+			<onup>61</onup>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+			<animation effect="fade" time="150">Visible</animation>
+			<animation effect="fade" time="150">Hidden</animation>
+			<visible>Control.IsVisible(6)</visible>
+		</control>
+		<control type="label">
+			<description>number of files/pages in list text label</description>
+			<posx>510</posx>
+			<posy>562</posy>
+			<width>225</width>
+			<height>22</height>
+			<font>font12</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<textcolor>black</textcolor>
+			<label>($INFO[Container(3).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(3).CurrentPage]/$INFO[Container(3).NumPages])</label>
+			<visible>Control.IsVisible(3)</visible>
+		</control>
+		<control type="label">
+			<description>number of files/pages in list text label</description>
+			<posx>510</posx>
+			<posy>562</posy>
+			<width>225</width>
+			<height>22</height>
+			<font>font12</font>
+			<align>right</align>
+			<aligny>center</aligny>
+			<scroll>true</scroll>
+			<textcolor>black</textcolor>
+			<label>($INFO[Container(6).NumItems]) $LOCALIZE[31025] - $LOCALIZE[31024] ($INFO[Container(6).CurrentPage]/$INFO[Container(6).NumPages])</label>
+			<visible>Control.IsVisible(6)</visible>
+		</control>
+		<control type="button" id="5">
+			<description>Manual button</description>
+			<posx>15</posx>
+			<posy>555</posy>
+			<width>150</width>
+			<include>ButtonInfoDialogsCommonValues</include>
+			<label>186</label>
+			<onleft>61</onleft>
+			<onright>3</onright>
+			<onup>3</onup>
+			<ondown>3</ondown>
+		</control>
+	</controls>
+</window>
