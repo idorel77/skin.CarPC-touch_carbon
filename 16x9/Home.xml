@@ -144,7 +144,7 @@
 			<posy>147</posy>
 			<width>400</width>
 			<height>400</height>
-			<texture>special://skin/media/logo.png</texture>
+			<texture>/home/pi/config/logo.png</texture>
 		</control>
 	
 		<control type="group">
