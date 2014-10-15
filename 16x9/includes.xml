@@ -8,7 +8,6 @@
 	<include file="IncludesHomeRecentlyAdded.xml" />
 	<include file="IncludesKeypad.xml" />
 	<include file="IncludesScripts.xml" />
-
 	<constant name="ScreenWidth">1280</constant>
 	<constant name="ScreenHeight">720</constant>
 	<constant name="FanartCrossfadeTime">500</constant>
@@ -52,20 +51,7 @@
 			</control>
 		</control>
 	</include>	
-	
-	<!--<include name="Logo_dc">
-		<control type="image">		
-		<include>Window_OpenClose_Animation_Slide_Down</include>>	
-		<include>VisibleFadeEffect</include>
-			<posx>720</posx>
-			<posy>15</posy>
-			<width>250</width>
-			<height>80</height>
-			<aligny>center</aligny>
-			<align>center</align>
-			<texture>logo_dc_small.png</texture>
-		</control>
-	</include>-->	
+		
 		
 	<include name="Time">
 	   <control type="image">		

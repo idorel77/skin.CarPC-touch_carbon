@@ -6,12 +6,9 @@
 		<include>CommonBackground</include>
 		<include>CommonTopBar</include>
 		<include>CommonBottomBar</include>
-		<!--<include>CommonBackgroundOverlay</include>-->
 		<include>HomeButtonCommons</include>
-		<!--<include>MeniuMediaBarLeft</include>-->
-		<!--<include>MediaBladeLeft</include>-->
         <include>BottomNowPLaying</include>
-        <include>Logo_dc</include>
+        
       
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Down</include>
@@ -20,26 +17,26 @@
 			<visible>!Window.IsActive(PlayerControls)</visible>
 			<include>VisibleFadeEffect</include>
 			<control type="button">
-				<description>Home Button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>500</width>
-				<height>80</height>
+				<description>Update button</description>
+				<posx>350r</posx>
+				<posy>10</posy>
+				<width>300</width>
+				<height>60</height>
 				<font>-</font>
-				<texturenofocus>floor_button_t.png</texturenofocus>
-				<texturefocus>floor_buttonFO.png</texturefocus>
+				<texturenofocus border="5">floor_button.png</texturenofocus>
+				<texturefocus border="5">floor_buttonFO.png</texturefocus>
 				<onclick>RunScript("plugin.program.carpcupdater")</onclick>
 			</control>
 			<control type="label">
 				<description>System Update</description>
-				<posx>0</posx>
-				<posy>-15</posy>
-				<height>80</height>
-				<width>500</width>
+				<posx>350r</posx>
+				<posy>7</posy>
+				<height>60</height>
+				<width>300</width>
 				<label>System Update</label>
 				<align>center</align>
 				<aligny>center</aligny>
-				<font>font50_title</font>
+				<font>font30_title</font>
 				<textcolor>FFFFFFF0</textcolor>	
 			</control>
 		</control>
