@@ -18,7 +18,7 @@
 			<include>VisibleFadeEffect</include>
 			<control type="button">
 				<description>Update button</description>
-				<posx>350r</posx>
+				<posx>320r</posx>
 				<posy>10</posy>
 				<width>300</width>
 				<height>60</height>
@@ -29,7 +29,7 @@
 			</control>
 			<control type="label">
 				<description>System Update</description>
-				<posx>350r</posx>
+				<posx>320r</posx>
 				<posy>7</posy>
 				<height>60</height>
 				<width>300</width>
@@ -365,21 +365,21 @@
 					<onclick>ActivateWindow(Profiles)</onclick>
 					<icon>icon_profile_w.png</icon>
 				</item>-->
-				<!--<item>
+				<item>
 					<label>20077</label>
 					<onclick>ActivateWindow(1113)</onclick>
 					<icon>icon_skin_w.png</icon>
-				</item>-->
+				</item>
 				<item>
 					<label>130</label>
 					<onclick>ActivateWindow(SystemInfo)</onclick>
 					<icon>icon_systeminfo_w.png</icon>
 				</item>
-				<item>
+				<!--<item>
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>icon_favourites_w.png</icon>
-				</item>
+				</item>-->
 				<item>
 					<label>31200</label>
 					<onclick>Back</onclick>

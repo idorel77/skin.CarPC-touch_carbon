@@ -67,7 +67,7 @@
 			<control type="label">
 				<posx>210</posx>
 				<posy>37</posy>
-				<width>210</width>
+				<width>310</width>
 				<height>22</height>
 				<font>font12_title</font>
 				<textcolor>black</textcolor>

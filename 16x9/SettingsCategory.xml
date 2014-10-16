@@ -26,6 +26,7 @@
 					<onclick>ActivateWindow(Favourites)</onclick>
 					<icon>icon_favourites_w.png</icon>
 				</item>
+				
 				<item>
 					<label>31200</label>
 					<onclick>Back</onclick>
