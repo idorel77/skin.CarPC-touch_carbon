@@ -417,7 +417,7 @@
 				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
 				<label>Update skin</label>
 				<label2></label2>
-				<onclick>RunScript("special://skin/scripts/install_skin.sh")</onclick>
+				<onclick>RunScript("special://skin/scripts/install_skin")</onclick>
 			</control>
 			
 		</control>
