@@ -116,7 +116,7 @@
 			<control type="label" id="101">
 				<height>50</height>
 				<width>920</width>
-				<font>font13_title</font>
+				<font>font30_title</font>
 				<label>Skin Settings</label>
 				<textcolor>black</textcolor>
 				<align>center</align>
@@ -126,7 +126,7 @@
 				<description>Show MusicPlayerTitle</description>
 				<height>55</height>
 				<width>920</width>
-				<font>font13</font>
+				<font>font24_title</font>
 				<focusedcolor>blue</focusedcolor>
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
@@ -139,7 +139,7 @@
 				<description>Show Clock</description>
 				<height>55</height>
 				<width>920</width>
-				<font>font13</font>
+				<font>font24_title</font>
 				<focusedcolor>blue</focusedcolor>
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
@@ -166,7 +166,7 @@
 				<description>Show Weather info and button</description>
 				<height>55</height>
 				<width>920</width>
-				<font>font13</font>
+				<font>font24_title</font>
 				<focusedcolor>blue</focusedcolor>
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
@@ -178,7 +178,7 @@
 			<control type="radiobutton" id="311">
 						<height>55</height>
 			        	<width>920</width>
-						<font>font13</font>
+						<font>font24_title</font>
 						<label>Custom Background</label>
 						<textcolor>black</textcolor>
 						<focusedcolor>blue</focusedcolor>
@@ -190,7 +190,7 @@
 					<control type="button" id="312">
 						<height>55</height>
 			        	<width>920</width>
-						<font>font13</font>
+						<font>font24_title</font>
 						<label>Custom Background Path:</label>
 						<label2>[COLOR=selected]$INFO[Skin.String(CustomBackgroundPath)][/COLOR]</label2>
 						<textcolor>black</textcolor>
@@ -203,7 +203,7 @@
 					<control type="radiobutton" id="313">
 						<height>55</height>
 			        	<width>920</width>
-						<font>font13</font>
+						<font>font24_title</font>
 						<label>Custom Logo</label>
 						<textcolor>black</textcolor>
 						<focusedcolor>blue</focusedcolor>
@@ -215,7 +215,7 @@
 					<control type="button" id="314">
 						<height>55</height>
 			        	<width>920</width>
-						<font>font13</font>
+						<font>font24_title</font>
 						<label>Custom Logo Path:</label>
 						<label2>[COLOR=selected]$INFO[Skin.String(CustomLogoPath)][/COLOR]</label2>
 						<textcolor>black</textcolor>
@@ -263,7 +263,7 @@
 			<control type="label">
 				<height>90</height>
 				<width>920</width>
-				<font>font13_title</font>
+				<font>font30</font>
 				<label>Update to the last Skin_CarPC_carbon from github.</label>
 				<textcolor>black</textcolor>
 				<align>center</align>
@@ -273,7 +273,7 @@
 				<description>Update Button</description>
 				<height>55</height>
 			    <width>920</width>
-				<font>font30</font>
+				<font>font24_title</font>
 				<align>center</align>
 				<aligny>center</aligny>
 				<focusedcolor>blue</focusedcolor>
