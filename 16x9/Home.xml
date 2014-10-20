@@ -22,7 +22,6 @@
 		</control>-->
 		
 		<include>CommonTopBar</include>		
-	
 		<include>XbmcLogo</include>
 		<include>Time</include>
 		<include>Weather</include>
@@ -136,16 +135,40 @@
 			</control>
 		</control>
 	
-		<control type="image">
-		
+	
+	   <!--<control type="image">
 		<include>Window_OpenClose_Animation_Zoom</include>
-		
 			<posx>440</posx>
 			<posy>147</posy>
 			<width>400</width>
 			<height>400</height>
             <texture>logo.png</texture>
+            <visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+		</control>-->
+
+		<control type="image">
+			<description>Normal Default Logo Image</description>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio>scale</aspectratio>
+			<texture>logo.png</texture>
+			<visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
 		</control>
+		<control type="image">
+			<description>User Set Logo Image</description>
+			<posx>440</posx>
+			<posy>147</posy>
+			<width>400</width>
+			<height>400</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomLogoPath)]</texture>
+			<visible>Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>
+
 	
 		<control type="group">
 		<include>Window_OpenClose_Animation_Zoom</include>

@@ -53,9 +53,11 @@
 	</include>	
 		
 		
-	<include name="Time">
+<include name="Time">
+	<control type="group">
+	 <visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonTime)</visible>
 	   <control type="image">		
-		<include>Window_OpenClose_Animation_Slide_Down</include>>	
+		<include>Window_OpenClose_Animation_Slide_Down</include>
 		<include>VisibleFadeEffect</include>
 			<posx>450</posx>
 			<posy>0</posy>
@@ -80,7 +82,7 @@
 			<include>VisibleFadeEffect</include>
 			<include>16x9_xPos_Relocation</include>
 		</control>
-		
+	  </control>	
 	</include>	
 	
 	<!-- weather Info -->
@@ -192,9 +194,9 @@
 	<include name="MusicPlayerTitle">
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
+			<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonMusicPlayerTitle)</visible>
             <posx>0</posx>
-            <posy>501</posy>
-           
+            <posy>501</posy>     
             <control type="label">
                 <visible>true</visible>
                 <posx>7</posx>
@@ -265,17 +267,29 @@
             </control>
         </control>
 	</include>
-	
 	<include name="CommonBackground">
 		<control type="image">
-			<posx>0</posx>
-			<posy>0</posy>
+			<description>Normal Default Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
 			<aspectratio>scale</aspectratio>
-			<width>ScreenWidth</width>
-			<height>ScreenHeight</height>
 			<texture fallback="special://skin/background/SKINDEFAULT.jpg">special://skin/background/$INFO[Skin.CurrentTheme].jpg</texture>
+			<visible>![Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))]</visible>
+			<include>VisibleFadeEffect</include>
 		</control>
-		<!--<include>CommonHeader</include>-->
+		<control type="image">
+			<description>User Set Background Image</description>
+			<left>0</left>
+			<top>0</top>
+			<width>1280</width>
+			<height>720</height>
+			<aspectratio>scale</aspectratio>
+			<texture>$INFO[Skin.String(CustomBackgroundPath)]</texture>
+			<visible>Skin.HasSetting(UseCustomBackground) + !IsEmpty(Skin.String(CustomBackgroundPath))</visible>
+			<include>VisibleFadeEffect</include>
+		</control>
 	</include>
 	<!--<include name="CommonBackgroundOverlay">
 		<control type="image">
