@@ -5,46 +5,46 @@
 	<include>Window_OpenClose_Animation_Zoom</include>
 	<coordinates>
 		<system>1</system>
-		<posx>140</posx>
-		<posy>30</posy>
+		<posx>100</posx>
+		<posy>23</posy>
 	</coordinates>
 	<controls>
 		<control type="image">
 			<posx>0</posx>
 			<posy>0</posy>
-			<width>1000</width>
-			<height>60</height>
+			<width>750</width>
+			<height>45</height>
 			<texture border="5">DialogHeader.png</texture>
 		</control>
 		<control type="label" id="1">
 			<description>header label</description>
-			<posx>20</posx>
+			<posx>15</posx>
 			<posy>0</posy>
 			<include>WindowTitleCommons</include>
-			<width>910</width>
+			<width>682</width>
 			<label>$LOCALIZE[20333]</label>
 		</control>
 		<control type="group">
-			<posx>930</posx>
+			<posx>698</posx>
 			<posy>0</posy>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="image">
 			<posx>0</posx>
-			<posy>60</posy>
-			<width>1000</width>
-			<height>840</height>
+			<posy>45</posy>
+			<width>750</width>
+			<height>630</height>
 			<texture border="5">DialogBack.png</texture>
 		</control>
 
 		<control type="group">
-			<posx>20</posx>
+			<posx>15</posx>
 			<control type="label">
 				<description>Content Picker Header</description>
 				<posx>0</posx>
-				<posy>70</posy>
-				<width>460</width>
-				<height>40</height>
+				<posy>52</posy>
+				<width>345</width>
+				<height>30</height>
 				<font>font13_title</font>
 				<label>$LOCALIZE[20344]</label>
 				<align>center</align>
@@ -54,9 +54,9 @@
 			<control type="spincontrolex" id="3">
 				<description>Content Picker</description>
 				<posx>0</posx>
-				<posy>120</posy>
-				<width>460</width>
-				<height>50</height>
+				<posy>90</posy>
+				<width>345</width>
+				<height>37</height>
 				<texturefocus border="5">ListNF.png</texturefocus>
 				<texturenofocus border="5">ListNF.png</texturenofocus>
 				<font>-</font>
@@ -69,10 +69,10 @@
 			</control>
 			<control type="label">
 				<description>Content Picker label</description>
-				<posx>10</posx>
-				<posy>120</posy>
-				<width>280</width>
-				<height>50</height>
+				<posx>8</posx>
+				<posy>90</posy>
+				<width>210</width>
+				<height>37</height>
 				<font>font13</font>
 				<label>$INFO[Control.GetLabel(3)]</label>
 				<align>left</align>
@@ -82,9 +82,9 @@
 			<control type="label">
 				<description>Used Scraper Header</description>
 				<posx>0</posx>
-				<posy>180</posy>
-				<width>460</width>
-				<height>20</height>
+				<posy>135</posy>
+				<width>345</width>
+				<height>15</height>
 				<font>font13</font>
 				<label>$LOCALIZE[31312]</label>
 				<align>center</align>
@@ -95,9 +95,9 @@
 			<control type="image">
 				<description>Used Scraper Image</description>
 				<posx>0</posx>
-				<posy>210</posy>
-				<width>460</width>
-				<height>190</height>
+				<posy>157</posy>
+				<width>345</width>
+				<height>142</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Icon]</texture>
 				<bordertexture border="8">ThumbShadow.png</bordertexture>
@@ -106,9 +106,9 @@
 			<control type="label">
 				<description>Used Scaper Label</description>
 				<posx>0</posx>
-				<posy>400</posy>
-				<width>460</width>
-				<height>30</height>
+				<posy>300</posy>
+				<width>345</width>
+				<height>23</height>
 				<font>font13</font>
 				<label>[B]$INFO[ListItem.Label][/B]</label>
 				<align>center</align>
@@ -117,13 +117,13 @@
 			</control>
 		</control>
 		<control type="group">
-			<posx>520</posx>
+			<posx>390</posx>
 			<control type="label">
 				<description>Scraper List Header</description>
 				<posx>0</posx>
-				<posy>70</posy>
-				<width>460</width>
-				<height>40</height>
+				<posy>52</posy>
+				<width>345</width>
+				<height>30</height>
 				<font>font13_title</font>
 				<label>$LOCALIZE[31313]</label>
 				<align>center</align>
@@ -132,35 +132,35 @@
 			</control>
 			<control type="list" id="4">
 				<posx>0</posx>
-				<posy>120</posy>
-				<width>460</width>
-				<height>310</height>
+				<posy>90</posy>
+				<width>345</width>
+				<height>233</height>
 				<onup>4</onup>
 				<onleft>3</onleft>
 				<onright>60</onright>
 				<ondown>4</ondown>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime>200</scrolltime>
-				<itemlayout height="50" width="460">
+				<itemlayout height="37" width="345">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>460</width>
-						<height>51</height>
+						<width>345</width>
+						<height>37</height>
 						<texture>MenuItemNF.png</texture>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>4</posx>
+						<posy>4</posy>
+						<width>30</width>
+						<height>30</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 					</control>
-					<control type="label" width="460">
-						<posx>60</posx>
+					<control type="label" width="345">
+						<posx>45</posx>
 						<posy>0</posy>
-						<width>410</width>
-						<height>50</height>
+						<width>307</width>
+						<height>37</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -169,26 +169,26 @@
 						<info>ListItem.Label</info>
 					</control>
 				</itemlayout>
-				<focusedlayout height="50">
+				<focusedlayout height="37">
 					<control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
-						<width>460</width>
-						<height>51</height>
+						<width>345</width>
+						<height>37</height>
 						<texture>MenuItemNF.png</texture>
 					</control>
 					<control type="image">
-						<posx>5</posx>
-						<posy>5</posy>
-						<width>40</width>
-						<height>40</height>
+						<posx>4</posx>
+						<posy>4</posy>
+						<width>30</width>
+						<height>30</height>
 						<texture>$INFO[Listitem.Icon]</texture>
 					</control>
-					<control type="label" width="460">
-						<posx>60</posx>
+					<control type="label" width="345">
+						<posx>45</posx>
 						<posy>0</posy>
-						<width>410</width>
-						<height>50</height>
+						<width>307</width>
+						<height>37</height>
 						<font>font13</font>
 						<align>left</align>
 						<aligny>center</aligny>
@@ -200,18 +200,18 @@
 			</control>
 		</control>
 		<control type="image">
-			<posx>20</posx>
-			<posy>460</posy>
-			<width>960</width>
-			<height>5</height>
+			<posx>15</posx>
+			<posy>345</posy>
+			<width>720</width>
+			<height>4</height>
 			<texture>separator.png</texture>
 		</control>
 		<control type="label">
 			<description>Scanning Options Header</description>
-			<posx>20</posx>
-			<posy>490</posy>
-			<width>960</width>
-			<height>30</height>
+			<posx>15</posx>
+			<posy>368</posy>
+			<width>720</width>
+			<height>22</height>
 			<font>font13_title</font>
 			<label>$LOCALIZE[31314]</label>
 			<align>center</align>
@@ -220,10 +220,10 @@
 		</control>
 		<control type="grouplist" id="5">
 			<description>control area</description>
-			<posx>20</posx>
-			<posy>540</posy>
-			<width>960</width>
-			<height>250</height>
+			<posx>15</posx>
+			<posy>405</posy>
+			<width>720</width>
+			<height>187</height>
 			<itemgap>-1</itemgap>
 			<onup>3</onup>
 			<ondown>28</ondown>
@@ -231,9 +231,9 @@
 			<onright>5</onright>
 		</control>
 		<control type="grouplist" id="9000">
-			<posx>20</posx>
-			<posy>830</posy>
-			<width>960</width>
+			<posx>15</posx>
+			<posy>600</posy>
+			<width>720</width>
 			<height>50</height>
 			<itemgap>5</itemgap>
 			<align>center</align>
@@ -244,19 +244,19 @@
 			<ondown>49</ondown>
 			<control type="button" id="28">
 				<description>OK Button</description>
-				<width>200</width>
+				<width>150</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>186</label>
 			</control>
 			<control type="button" id="29">
 				<description>Cancel Button</description>
-				<width>200</width>
+				<width>150</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>222</label>
 			</control>
 			<control type="button" id="6">
 				<description>Settings Button</description>
-				<width>200</width>
+				<width>150</width>
 				<include>ButtonInfoDialogsCommonValues</include>
 				<label>5</label>
 			</control>
@@ -266,7 +266,7 @@
 			<description>Default Button</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<height>50</height>
+			<height>37</height>
 			<font>font13</font>
 			<textcolor>black</textcolor>
 			<texturefocus border="5">MenuItemNF.png</texturefocus>
@@ -276,7 +276,7 @@
 			<description>Default RadioButton</description>
 			<posx>0</posx>
 			<posy>0</posy>
-			<height>50</height>
+			<height>37</height>
 			<font>font13</font>
 			<textcolor>black</textcolor>
 			<texturefocus border="5">MenuItemNF.png</texturefocus>
@@ -285,18 +285,18 @@
 
 		<control type="group">
 			<control type="image">
-				<posx>370</posx>
-				<posy>60</posy>
-				<width>5</width>
-				<height>280</height>
+				<posx>278</posx>
+				<posy>45</posy>
+				<width>4</width>
+				<height>210</height>
 				<aspectratio>stretch</aspectratio>
 				<texture>separator_vertical.png</texture>
 			</control>
 			<control type="scrollbar" id="60">
-				<posx>745</posx>
-				<posy>100</posy>
-				<width>25</width>
-				<height>240</height>
+				<posx>559</posx>
+				<posy>75</posy>
+				<width>20</width>
+				<height>180</height>
 				<texturesliderbackground border="0,14,0,14">ScrollBarV.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">ScrollBarV_bar.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">ScrollBarV_bar_focus.png</texturesliderbarfocus>

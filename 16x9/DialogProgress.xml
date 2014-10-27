@@ -2,8 +2,8 @@
 	<defaultcontrol always="true">10</defaultcontrol>
 	<coordinates>
 		<system>1</system>
-		<posx>290</posx>
-		<posy>300</posy>
+		<posx>80</posx>
+		<posy>150</posy>
 	</coordinates>
 	<include>16x9_xPos_Relocation</include>
 	<include>dialogeffect</include>

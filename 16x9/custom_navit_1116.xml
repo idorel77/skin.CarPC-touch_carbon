@@ -8,6 +8,7 @@
         <control type="group">
             <include>Window_OpenClose_Animation_Zoom_Reverted</include>
             <include>CommonBackground</include>
+           
         </control>
         
 	</controls>

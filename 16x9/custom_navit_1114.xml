@@ -20,26 +20,13 @@
 				<onclick>RunScript("special://skin/scripts/navigation_click.py")</onclick>
 			</control>
 		</control>-->
-        
+
         <!-- Background fading -->
         <control type="group">
             <include>Window_OpenClose_Animation_Zoom_Reverted</include>
             <include>CommonBackground</include>
         </control>
         
-        <!-- Media controls -->
-        <!--<include>BottomNowPLaying</include>-->
-        
-        <!-- Bottom Right Controls -->
-        <!--<control type="panel" id="9002">
-			<include>SubMenuCommonLayout</include>
-			<content>
-                <item>
-					<onclick>ParentDir</onclick>
-					<icon>icon_back_w.png</icon>
-				</item>
-			</content>
-		</control>-->
         
 	</controls>
 </window>
