@@ -1286,4 +1286,14 @@
 		<animation effect="fade" time="300">Visible</animation>
 		<animation effect="fade" time="300">Hidden</animation>
 	</include>
+	<include name="KeyboardButton">
+        <width>99</width>
+        <height>99</height>
+        <texturenofocus border="5">keyboardkeydark.png</texturenofocus>
+        <texturefocus border="5">KeyboardKey.png</texturefocus>
+        <align>center</align>
+        <aligny>center</aligny>
+        <font>font13</font>
+        <focusedcolor>black</focusedcolor>
+        </include>
 </includes>
