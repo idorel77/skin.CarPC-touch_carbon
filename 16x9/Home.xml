@@ -300,6 +300,5 @@
 			</content>
 		</control>
    		<include>BehindDialogFadeOut</include>
-		
 	</controls>	
 </window>

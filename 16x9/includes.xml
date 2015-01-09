@@ -39,7 +39,7 @@
 				<width>300</width>
 				<height>70</height>
 				<aspectratio align="left">keep</aspectratio>
-				<texture>xbmc-logo.png</texture>
+				<texture>kodi-logo.png</texture>
 			</control>
 			<control type="button">
 				<posx>1</posx>
