@@ -268,8 +268,14 @@
 		</control>
 		
 		<include>CommonBottomBar</include>
-		<include>MusicPlayerTitle</include>
-		<include>RadioStationName</include>
+
+		<!-- Song/radio info -->
+		<control type="group">
+			<posy>150r</posy>
+			<include>MusicPlayerTitle</include>
+			<include>RadioStationName</include>
+		</control>
+
 		<include>HomeRecentlyAddedInfo</include>
 		<include>BottomNowPLaying</include>
 		

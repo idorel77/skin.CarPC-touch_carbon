@@ -195,35 +195,33 @@
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
 			<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonMusicPlayerTitle)</visible>
-            <posx>0</posx>
-            <posy>501</posy>     
             <control type="label">
                 <visible>true</visible>
-                <posx>7</posx>
-                <posy>75</posy>
+                <posx>10</posx>
+                <posy>0</posy>
                 <width>600</width>
-                <height>52</height>
-                <font>font40_title</font>
+                <height>50</height>
+                <font>font50_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align></align>
                 <aligny>center</aligny>
-                <info>MusicPlayer.Artist</info>
+                <label>$INFO[MusicPlayer.Artist]</label>
                 <scrollspeed>50</scrollspeed>
                 <scrollsuffix> - </scrollsuffix>
             </control>
             <control type="label">
                 <visible>true</visible>
-                <posx>13r</posx>
-                <posy>75</posy>
+                <posx>10r</posx>
+                <posy>0</posy>
                 <width>600</width>
-                <height>52</height>
-                <font>font40_title</font>
+                <height>50</height>
+                <font>font50_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>right</align>
                 <aligny>center</aligny>
-                <info>MusicPlayer.Title</info>
+                <label>$INFO[MusicPlayer.Title]</label>
                 <scrollspeed>50</scrollspeed>
                 <scrollsuffix> - </scrollsuffix>
             </control>
@@ -232,14 +230,12 @@
 	<include name="RadioStationName">
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
-            <posx>0</posx>
-            <posy>570</posy>
             <control type="label">
                 <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
                 <posx>10</posx>
                 <posy>0</posy>
-                <width>800</width>
-                <height>70</height>
+                <width>600</width>
+                <height>50</height>
                 <font>font50_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
@@ -253,14 +249,13 @@
                 <visible>substring(Window(Home).Property(Radio.Active),true)</visible>
                 <posx>10r</posx>
                 <posy>0</posy>
-                <width>800</width>
-                <height>70</height>
+                <width>600</width>
+                <height>50</height>
                 <font>font50_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>right</align>
                 <aligny>center</aligny>
-                <!--<info>MusicPlayer.Title</info>-->
                 <label>$INFO[Window(Home).Property(Radio.StationName)]</label>
                 <scrollspeed>50</scrollspeed>
                 <scrollsuffix> - </scrollsuffix>
@@ -322,8 +317,7 @@
                     <height>-50</height>
                     <!--<texture>shelf_shadow.png</texture>-->
             </control>
-            
-            <include>CommonNowPlaying</include>
+
             <include>CommonVolumeBottom</include>
             <include>PlayerControlsAll</include>
         </control>
@@ -499,7 +493,7 @@
 	<include name="PlayerControlsAll">
 		<control type="group" id="100">
 			<visible>Player.HasAudio | Player.HasVideo</visible>
-			<posx>204</posx>
+			<posx>254</posx>
 			<posy>11</posy>
 			<include>16x9_xPos_Relocation</include>
 			<control type="button" id="600">
