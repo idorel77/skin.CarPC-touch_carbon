@@ -4,11 +4,14 @@
 	<onunload>Skin.Reset(MediaSubMenuVisible)</onunload>
 	<controls>
 		<include>CommonBackground</include>
-		<include>CommonBackgroundOverlay</include>
+        <include>CommonTopBar</include>
+        <include>CommonBottomBar</include>
+        <include>CommonBackgroundOverlay</include>
 		<include>HomeButtonCommons</include>
 		<include>CommonNowPlaying</include>
 		<include>OptionsButtonCommons</include>
-		<control type="label">
+        <include>BottomNowPLaying</include>
+        <control type="label">
 			<description>Window label</description>
 			<include>MediaWindowTitleCommons</include>
 			<label>$LOCALIZE[10503]</label>
@@ -153,10 +156,11 @@
 					</control>
 				</focusedlayout>
 			</control>
+            
 		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>487</posx>
+			<posx>687</posx>
 			<posy>82</posy>
 			<control type="label">
 				<posx>0</posx>
@@ -304,12 +308,12 @@
 				<item>
 					<label>1036</label>
 					<onclick>ActivateWindow(Favourites)</onclick>
-					<icon>icon_favourites.png</icon>
+					<icon>icon_favourites_w.png</icon>
 				</item>
 				<item>
 					<label>31200</label>
 					<onclick>ParentDir</onclick>
-					<icon>icon_back.png</icon>
+					<icon>icon_back_w.png</icon>
 				</item>
 			</content>
 		</control>
