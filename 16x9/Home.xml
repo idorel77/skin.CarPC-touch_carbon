@@ -17,6 +17,8 @@
 		<include>XbmcLogo</include>
 		<include>Time</include>
 		<include>Weather</include>
+		<include>Logob</include>
+		
 		
 
 			<!--Meniu by me-->
@@ -56,85 +58,20 @@
 			</control>
 		</control>
 		
-		<control type="group">
-		<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>20</posx>
-			<posy>280</posy>
-			<control type="button">
-				<description>Navit Button</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>408</width>
-				<height>130</height>
-				<texturenofocus >home_2.png</texturenofocus>
-				<texturefocus border="5">home_2_p.png</texturefocus>
-				<onclick>RunScript("plugin.program.navigation")</onclick>
-			</control>
-			<control type="image">
-				<description>Navit Button Image</description>
-				<posx>30</posx>
-				<posy>30</posy>
-				<width>80</width>
-				<height>80</height>
-				<texture>navit_logo2.png</texture>
-			</control>
-			<control type="label">
-				<description>Navit label</description>
-				<posx>122</posx>
-				<posy>22</posy>
-				<height>90</height>
-				<width>250</width>
-				<label>Navigation</label>
-				<aligny>center</aligny>
-				<font>font40_title</font>
-				<textcolor>FFFFFFFF</textcolor>
-			</control>
-		</control>
+	  <include>Navigation</include>
+	  <include>Pictures</include>
+	  
+	  <include>Radio</include>
+	  <include>Favourites</include>
+	  
 		
-		<control type="group">
-		<include>Window_OpenClose_Animation_Zoom</include>
-			<posx>20</posx>
-			<posy>430</posy>
-			<control type="button">
-				<description>Radio</description>
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>540</width>
-				<height>130</height>
-				<texturenofocus >home_3.png</texturenofocus>
-				<texturefocus border="5">home_3_p.png</texturefocus>
-				<onclick>RunScript("plugin.program.radioFM")</onclick>
-			</control>
-			<control type="image">
-				<description>Radio</description>
-				<posx>30</posx>
-				<posy>25</posy>
-				<width>80</width>
-				<height>80</height>
-				<texture>radio2.png</texture>
-			</control>
-			<control type="label">
-				<description>Radio label</description>
-				<posx>122</posx>
-				<posy>22</posy>
-				<height>90</height>
-				<width>250</width>
-				<label>Radio FM</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>font40_title</font>
-				<textcolor>FFFFFFFF</textcolor>
-			</control>
-		</control>
-	
-
 		<control type="image">
 			<description>Normal Default Logo Image</description>
 			<posx>440</posx>
 			<posy>147</posy>
 			<width>400</width>
 			<height>400</height>
-			<aspectratio>scale</aspectratio>
+			<aspectratio></aspectratio>
 			<texture>logo.png</texture>
 			<visible>![Skin.HasSetting(UseCustomLogo) + !IsEmpty(Skin.String(CustomLogoPath))]</visible>
 			<include>Window_OpenClose_Animation_Zoom</include>

@@ -37,6 +37,10 @@
 					<bordertexture>ThumbBorderGrey.png</bordertexture>
 					<bordersize>2</bordersize>
 				</control>
+				
+
+
+				
 				<control type="label">
 					<description>Artist label</description>
 					<posx>625</posx>

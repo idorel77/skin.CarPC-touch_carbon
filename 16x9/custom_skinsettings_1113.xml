@@ -86,10 +86,10 @@
 				<onfocus>Skin.SetString(SkinSettings,1)</onfocus>
 			</control>
 			<control type="button" id="92">
-				<description>Addon Button</description>
+				<description>Settings Button</description>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>Update Skin</label>
+				<label>Setting Buttons</label>
 				<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 			</control>
 			<!--<control type="button" id="93">
@@ -162,7 +162,7 @@
 				<enable>Library.HasContent(TVShows)</enable>
 		</control>-->
 		
-			<control type="radiobutton" id="111">
+			<control type="radiobutton" id="105">
 				<description>Show Weather info and button</description>
 				<height>55</height>
 				<width>920</width>
@@ -175,7 +175,23 @@
 				<onclick>Skin.ToggleSetting(HideHomeButtonWeather)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonWeather)</selected>
 			</control>
-			<control type="radiobutton" id="311">
+			
+			<control type="radiobutton" id="106">
+				<description>Show Logob</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show LogoBackground</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonLogob)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonLogob)</selected>
+			</control>
+			        
+					
+					<control type="radiobutton" id="107">
 						<height>55</height>
 			        	<width>920</width>
 						<font>font24_title</font>
@@ -187,7 +203,8 @@
 						<onclick>Skin.ToggleSetting(UseCustomBackground)</onclick>
 						<selected>Skin.HasSetting(UseCustomBackground)</selected>
 					</control>
-					<control type="button" id="312">
+					
+					<control type="button" id="108">
 						<height>55</height>
 			        	<width>920</width>
 						<font>font24_title</font>
@@ -200,7 +217,7 @@
 						<onclick>Skin.SetImage(CustomBackgroundPath)</onclick>
 						<enable>Skin.HasSetting(UseCustomBackground)</enable>
 					</control>
-					<control type="radiobutton" id="313">
+					<control type="radiobutton" id="109">
 						<height>55</height>
 			        	<width>920</width>
 						<font>font24_title</font>
@@ -212,7 +229,7 @@
 						<onclick>Skin.ToggleSetting(UseCustomLogo)</onclick>
 						<selected>Skin.HasSetting(UseCustomLogo)</selected>
 					</control>
-					<control type="button" id="314">
+					<control type="button" id="110">
 						<height>55</height>
 			        	<width>920</width>
 						<font>font24_title</font>
@@ -239,7 +256,62 @@
 			<onleft>2</onleft>
 			<onright>30</onright>
 			<visible>Skin.String(SkinSettings,2)</visible>
-			<!--<control type="label" id="220">
+			
+			<control type="radiobutton" id="201">
+				<description>Button 2 Show Navigation</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show Navigation Button 2</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonNavigation)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonNavigation)</selected>
+			</control>
+			<control type="radiobutton" id="202">
+				<description>Button 2 Show Pictures</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show Pictures Button 2</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonPictures)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonPictures)</selected>
+			</control>
+			
+			<control type="radiobutton" id="203">
+				<description>Button 3 Show Radio FM</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show Pictures Radio FM Button 3</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonRadio)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonRadio)</selected>
+			</control>
+			<control type="radiobutton" id="204">
+				<description>Button 3 Show Favourites</description>
+				<height>55</height>
+				<width>920</width>
+				<font>font24_title</font>
+				<focusedcolor>blue</focusedcolor>
+				<textcolor>black</textcolor>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<label>Show Favourites Button 3</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonFavourites)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
+			</control>
+			
+			<!--<control type="label" id="201">
 				<height>50</height>
 				<width>920</width>
 				<font>font13_title</font>
@@ -248,7 +320,7 @@
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>
-			<control type="button" id="221">
+			<control type="button" id="202">
 				<description>Subtitle Script Button</description>
 				<height>55</height>
 				<width>920</width>
@@ -260,30 +332,7 @@
 				<label2>$INFO[system.addontitle(Skin.String(SubtitleScript_Path))]</label2>
 				<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 			</control>-->
-			<control type="label">
-				<height>90</height>
-				<width>920</width>
-				<font>font30</font>
-				<label>Update to the last Skin_CarPC_carbon from github.</label>
-				<textcolor>black</textcolor>
-				<align>center</align>
-				<aligny>center</aligny>
-			</control>
-			<control type="button" >
-				<description>Update Button</description>
-				<height>55</height>
-			    <width>920</width>
-				<font>font24_title</font>
-				<align>center</align>
-				<aligny>center</aligny>
-				<focusedcolor>blue</focusedcolor>
-				<textcolor>black</textcolor>
-				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
-				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<label>Update skin</label>
-				<label2></label2>
-				<onclick>RunScript("special://skin/scripts/install_skin.sh")</onclick>
-			</control>
+			
 			
 		</control>
 		<control type="scrollbar" id="30">

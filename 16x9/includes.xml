@@ -191,6 +191,172 @@
 		</control>
 	</include>
 	
+    <include name="Navigation">
+		<control type="group">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonNavigation)</visible>
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>280</posy>
+			<control type="button">
+				<description>Navit Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>408</width>
+				<height>130</height>
+				<texturenofocus >home_2.png</texturenofocus>
+				<texturefocus border="5">home_2_p.png</texturefocus>
+				<onclick>RunScript("plugin.program.navigation")</onclick>
+			</control>
+			<control type="image">
+				<description>Navit Button Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>navit_logo2.png</texture>
+			</control>
+			<control type="label">
+				<description>Navit label</description>
+				<posx>122</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Navigation</label>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="Pictures">
+		<control type="group">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPictures)</visible>
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>280</posy>
+			<control type="button">
+				<description>Pictures Button</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>408</width>
+				<height>130</height>
+				<texturenofocus >home_2.png</texturenofocus>
+				<texturefocus border="5">home_2_p.png</texturefocus>
+				<onclick>ActivateWindow(Pictures)</onclick>
+			</control>
+			<control type="image">
+				<description>Pictures Button Image</description>
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>pictures2.png</texture>
+			</control>
+			<control type="label">
+				<description>Pictures label</description>
+				<posx>122</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Pictures</label>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</include>
+	
+	<include name="Logob">
+		<control type="image">
+			<description>Normal Default Logo Image</description>
+			<posx>430</posx>
+			<posy>137</posy>
+			<width>419</width>
+			<height>419</height>
+			<aspectratio></aspectratio>
+			<texture>logo_b.png</texture>
+			<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonLogob)</visible>
+			<include>Window_OpenClose_Animation_Zoom</include>
+		</control>
+	</include>
+	
+<include name="Radio">
+	<control type="group">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonRadio)</visible>
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>430</posy>
+			<control type="button">
+				<description>Radio</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>540</width>
+				<height>130</height>
+				<texturenofocus >home_3.png</texturenofocus>
+				<texturefocus border="5">home_3_p.png</texturefocus>
+				<onclick>RunScript("plugin.program.radioFM")</onclick>
+			</control>
+			<control type="image">
+				<description>Radio</description>
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>radio2.png</texture>
+			</control>
+			<control type="label">
+				<description>Radio label</description>
+				<posx>122</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Radio FM</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</include>
+	<include name="Favourites">
+	  <control type="group">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonFavourites)</visible>
+		<include>Window_OpenClose_Animation_Zoom</include>
+			<posx>20</posx>
+			<posy>430</posy>
+			<control type="button">
+				<description>Favourites</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>540</width>
+				<height>130</height>
+				<texturenofocus >home_3.png</texturenofocus>
+				<texturefocus border="5">home_3_p.png</texturefocus>
+				<onclick>ActivateWindow(Favourites)</onclick>
+			</control>
+			<control type="image">
+				<description>Favourites</description>
+				<posx>30</posx>
+				<posy>25</posy>
+				<width>80</width>
+				<height>80</height>
+				<texture>icon_favourites_w.png</texture>
+			</control>
+			<control type="label">
+				<description>Favourites label</description>
+				<posx>122</posx>
+				<posy>22</posy>
+				<height>90</height>
+				<width>250</width>
+				<label>Favourites</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>font40_title</font>
+				<textcolor>FFFFFFFF</textcolor>
+			</control>
+		</control>
+	</include>
+	
 	<include name="MusicPlayerTitle">
 		<control type="group">
 			<include>Window_OpenClose_Animation_Slide_Up</include>
@@ -286,15 +452,7 @@
 			<include>VisibleFadeEffect</include>
 		</control>
 	</include>
-	<!--<include name="CommonBackgroundOverlay">
-		<control type="image">
-				<posx>0</posx>
-				<posy>0</posy>
-				<width>ScreenWidth</width>
-				<height>150</height>
-				<texture>shelf_shadow.png</texture>
-			</control>
-	</include>-->
+	
     <include name="BottomNowPLaying">
         <control type="group">
             <include>Window_OpenClose_Animation_Slide_Up</include>
@@ -331,7 +489,7 @@
 			<control type="label">
 				<description>label</description>
 				<posx>7</posx>
-				<posy>0</posy>
+				<posy>45</posy>
 				<height>37</height>
 				<width>150</width>
 				<label>13376</label>
@@ -343,7 +501,7 @@
 			<control type="label">
 				<description>Volumelabel</description>
 				<posx>334</posx>
-				<posy>0</posy>
+				<posy>45</posy>
 				<height>37</height>
 				<width>150</width>
 				<label>$INFO[Control.GetLabel(1)]</label>
@@ -356,7 +514,7 @@
 			<control type="progress" id="2">
 				<description>Volume</description>
 				<posx>0</posx>
-				<posy>41</posy>
+				<posy>8</posy>
 				<width>337</width>
 				<height>37</height>
 				<info>Player.Volume</info>
@@ -364,9 +522,9 @@
 			<control type="slider" id="1">
 				<description>Volume Slider</description>
 				<posx>0</posx>
-				<posy>41</posy>
+				<posy>5</posy>
 				<width>337</width>
-				<height>37</height>
+				<height>47</height>
  				<info>Player.Volume</info>
 				<action>Volume</action>
 				<texturesliderbar>OSDProgressBack2.png</texturesliderbar>
@@ -934,55 +1092,55 @@
 				<height>70</height>
 				<texture>programs2.png</texture>
 			</control>
-			<control type="image">
+			<!--<control type="image">
 						<posx>0</posx>
 						<posy>5</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>82</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>159</posy>
 						<width>67</width>
 						<height>2</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>236</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>313</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>390</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
+						<texture>linie_albastra.png</texture>
 					</control>
 					<control type="image">
 						<posx>0</posx>
 						<posy>468</posy>
 						<width>67</width>
 						<height>1</height>
-						<texture>special://skin/media/linie_albastra.png</texture>
-					</control>
+						<texture>linie_albastra.png</texture>
+					</control>-->
 			
 			</control>
 		</control>
