@@ -67,12 +67,12 @@
 			</control>
 			<control type="label">
 				<description>Appearance</description>
-				<posx>110</posx>
+				<posx>400</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
 				<label>Appearance</label>
-				<align>center</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
 				<textcolor>FFFFFFFF</textcolor>		
@@ -105,12 +105,12 @@
 			</control>
 			<control type="label">
 				<description>Music</description>
-				<posx>180</posx>
+				<posx>400</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
 				<label>Music</label>
-				<align>center</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
 				<textcolor>FFFFFFFF</textcolor>		
@@ -143,12 +143,12 @@
 			</control>
 			<control type="label">
 				<description>Weather</description>
-				<posx>146</posx>
+				<posx>400</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
 				<label>Weather</label>
-				<align>center</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
 				<textcolor>FFFFFFFF</textcolor>		
@@ -181,12 +181,12 @@
 			</control>
 			<control type="label">
 				<description>Services</description>
-				<posx>150</posx>
+				<posx>400</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
 				<label>Services</label>
-				<align>center</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
 				<textcolor>FFFFFFFF</textcolor>		
@@ -219,12 +219,12 @@
 			</control>
 			<control type="label">
 				<description>Services</description>
-				<posx>150</posx>
+				<posx>400</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
 				<label>Skin Settings</label>
-				<align>center</align>
+				<align>right</align>
 				<aligny>center</aligny>
 				<font>font30_title</font>
 				<textcolor>FFFFFFFF</textcolor>		
@@ -249,7 +249,7 @@
 			</control>
 			<control type="image">
 				<description>Video</description>
-				<posx>337</posx>
+				<posx>360</posx>
 				<posy>20</posy>
 				<width>60</width>
 				<height>60</height>
@@ -257,7 +257,7 @@
 			</control>
 			<control type="label">
 				<description>Video</description>
-				<posx>75</posx>
+				<posx>50</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
@@ -287,7 +287,7 @@
 			</control>
 			<control type="image">
 				<description>Pictures</description>
-				<posx>337</posx>
+				<posx>360</posx>
 				<posy>20</posy>
 				<width>60</width>
 				<height>60</height>
@@ -295,7 +295,7 @@
 			</control>
 			<control type="label">
 				<description>Pictures</description>
-				<posx>75</posx>
+				<posx>50</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
@@ -325,7 +325,7 @@
 			</control>
 			<control type="image">
 				<description>Add-ons</description>
-				<posx>337</posx>
+				<posx>360</posx>
 				<posy>20</posy>
 				<width>60</width>
 				<height>60</height>
@@ -333,7 +333,7 @@
 			</control>
 			<control type="label">
 				<description>Add-ons</description>
-				<posx>75</posx>
+				<posx>50</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
@@ -363,7 +363,7 @@
 			</control>
 			<control type="image">
 				<description>System</description>
-				<posx>337</posx>
+				<posx>360</posx>
 				<posy>20</posy>
 				<width>60</width>
 				<height>60</height>
@@ -371,7 +371,7 @@
 			</control>
 			<control type="label">
 				<description>System</description>
-				<posx>75</posx>
+				<posx>50</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>
@@ -401,7 +401,7 @@
 			</control>
 			<control type="image">
 				<description>System Update</description>
-				<posx>337</posx>
+				<posx>360</posx>
 				<posy>20</posy>
 				<width>60</width>
 				<height>60</height>
@@ -409,7 +409,7 @@
 			</control>
 			<control type="label">
 				<description>System Update</description>
-				<posx>75</posx>
+				<posx>50</posx>
 				<posy>0</posy>
 				<height>100</height>
 				<width>300</width>

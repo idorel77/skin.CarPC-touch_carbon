@@ -293,7 +293,7 @@
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
 				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<label>Show Pictures Radio FM Button 3</label>
+				<label>Show Radio FM Button 3</label>
 				<onclick>Skin.ToggleSetting(HideHomeButtonRadio)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonRadio)</selected>
 			</control>

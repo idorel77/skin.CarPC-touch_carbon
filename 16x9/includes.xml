@@ -192,8 +192,8 @@
 	</include>
 	
     <include name="Navigation">
-		<control type="group">
-		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonNavigation)</visible>
+		<control type="group" id="20000">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonNavigation) + !Control.IsVisible(30000)</visible>
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>280</posy>
@@ -229,8 +229,8 @@
 		</control>
 	</include>
 	<include name="Pictures">
-		<control type="group">
-		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPictures)</visible>
+		<control type="group" id="30000">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPictures) + !Control.IsVisible(20000)</visible>
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>280</posy>
@@ -281,8 +281,8 @@
 	</include>
 	
 <include name="Radio">
-	<control type="group">
-		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonRadio)</visible>
+	<control type="group" id="40000">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonRadio) + !Control.IsVisible(50000)</visible>
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>430</posy>
@@ -319,8 +319,8 @@
 		</control>
 	</include>
 	<include name="Favourites">
-	  <control type="group">
-		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonFavourites)</visible>
+	  <control type="group" id="50000">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonFavourites) + !Control.IsVisible(40000)</visible>
 		<include>Window_OpenClose_Animation_Zoom</include>
 			<posx>20</posx>
 			<posy>430</posy>
