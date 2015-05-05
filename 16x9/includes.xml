@@ -364,10 +364,10 @@
             <control type="label">
                 <visible>true</visible>
                 <posx>10</posx>
-                <posy>0</posy>
+                <posy>10</posy>
                 <width>600</width>
-                <height>50</height>
-                <font>font50_title</font>
+                <height>30</height>
+                <font>font30_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align></align>
@@ -379,10 +379,10 @@
             <control type="label">
                 <visible>true</visible>
                 <posx>10r</posx>
-                <posy>0</posy>
+                <posy>10</posy>
                 <width>600</width>
-                <height>50</height>
-                <font>font50_title</font>
+                <height>30</height>
+                <font>font30_title</font>
                 <textcolor>white</textcolor>
                 <selectedcolor>selected</selectedcolor>
                 <align>right</align>
