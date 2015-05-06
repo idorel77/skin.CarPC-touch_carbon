@@ -28,34 +28,80 @@
 			<control type="group">
 				<control type="image">
 					<description>cover image</description>
-					<posx>5</posx>
+					<posx>20</posx>
 					<posy>5</posy>
-					<width>600</width>
+					<width>550</width>
 					<height>500</height>
 					<info>MusicPlayer.Cover</info>
-					<aspectratio>keep</aspectratio>
+					<aspectratio></aspectratio>
 					<bordertexture>ThumbBorderGrey.png</bordertexture>
 					<bordersize>2</bordersize>
 				</control>
 				
+				<control type="image">
+					<description>cover image</description>
+					<posx>450</posx>
+					<posy>0</posy>
+					<width>900</width>
+					<height>50</height>
+					<texture>ceas.png</texture>
+				</control>
 
-
-				
+					
+   				<control type="label">
+					<description>Artist label</description>
+					<posx>625</posx>
+					<posy>100</posy>
+					<width>620</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font30_title</font>
+					<label>Artist</label>
+					<textcolor>blue</textcolor>
+				</control>
+				<control type="image">
+					<description>artist label background</description>
+					<posx>450</posx>
+					<posy>135</posy>
+					<width>900</width>
+					<height>90</height>
+					<texture>ceas.png</texture>
+				</control>				
 				<control type="label">
 					<description>Artist label</description>
 					<posx>625</posx>
-					<posy>150</posy>
-					<width>630</width>
+					<posy>140</posy>
+					<width>620</width>
 					<height>25</height>
 					<align>left</align>
-					<font>font40_title</font>
+					<font>font50_title</font>
 					<label>$INFO[MusicPlayer.Artist]</label>
 					<textcolor>white</textcolor>
 				</control>
+				
+				<control type="label">
+					<description>Title label</description>
+					<posx>625</posx>
+					<posy>230</posy>
+					<width>620</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font30_title</font>
+					<label>Title</label>
+					<textcolor>blue</textcolor>
+				</control>		
+				<control type="image">
+					<description>title label background</description>
+					<posx>450</posx>
+					<posy>265</posy>
+					<width>900</width>
+					<height>70</height>
+					<texture>ceas.png</texture>
+				</control>
 				<control type="label">
 					<posx>625</posx>
-					<posy>240</posy>
-					<width>630</width>
+					<posy>290</posy>
+					<width>620</width>
 					<height>22</height>
 					<font>font40_title</font>
 					<align>left</align>
@@ -64,20 +110,41 @@
 					<textcolor>white</textcolor>
 					<scroll>true</scroll>
 				</control>
+				
 				<control type="label">
 					<description>Album label</description>
 					<posx>625</posx>
-					<posy>360</posy>
-					<width>630</width>
+					<posy>365</posy>
+					<width>620</width>
+					<height>50</height>
+					<align>left</align>
+					<font>font30_title</font>
+					<label>Album</label>
+					<textcolor>blue</textcolor>
+				</control>		
+				<control type="image">
+					<description>album label background</description>
+					<posx>450</posx>
+					<posy>405</posy>
+					<width>900</width>
+					<height>60</height>
+					<texture>ceas.png</texture>
+				</control>
+				<control type="label">
+					<description>Album label</description>
+					<posx>625</posx>
+					<posy>410</posy>
+					<width>620</width>
 					<height>25</height>
 					<align>left</align>
 					<font>font30_title</font>
 					<label>$INFO[MusicPlayer.Album]</label>
 					<textcolor>white</textcolor>
 				</control>
+				
 				<control type="group">
 					<posx>625</posx>
-					<posy>405</posy>
+					<posy>460</posy>
 					<width>600</width>
 					<height>60</height>
 					<control type="image">
@@ -130,14 +197,14 @@
 				</control>
 				<control type="label">
 					<description>Partymode Header label</description>
-					<posx>1100</posx>
+					<posx>1050</posx>
 					<posy>480</posy>
 					<width>300</width>
 					<height>19</height>
 					<align>left</align>
 					<aligny>center</aligny>
 					<font>font24_title</font>
-					<textcolor>white</textcolor>
+					<textcolor>blue</textcolor>
 					<label>$INFO[musicplayer.Playlistposition,$LOCALIZE[554]: ]$INFO[musicplayer.Playlistlength, / ]</label>
 					<visible>!MusicPartyMode.Enabled</visible>
 				</control>
