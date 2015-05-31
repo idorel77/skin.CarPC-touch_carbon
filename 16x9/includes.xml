@@ -825,7 +825,7 @@
 				<posy>30</posy>
 				<width>37</width>
 				<height>480</height>
-				<texturesliderbackground border="0,14,0,14">special://skin/media/linie_albastra_v.png</texturesliderbackground>
+				<texturesliderbackground border="0,14,0,14">linie_albastra_v.png</texturesliderbackground>
 				<texturesliderbar border="0,14,0,14">osdslidernib.png</texturesliderbar>
 				<texturesliderbarfocus border="0,14,0,14">osdslidernib.png</texturesliderbarfocus>
 				<textureslidernib></textureslidernib>
