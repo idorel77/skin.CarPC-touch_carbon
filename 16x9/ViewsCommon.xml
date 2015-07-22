@@ -5,8 +5,8 @@
 			<posy>85</posy>
 			<width>1106</width>
 			<height>538</height>
-			<onleft>2</onleft>
-			<onright>60</onright>
+			<onleft></onleft>
+			<onright></onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="535">list</viewtype>
@@ -112,8 +112,8 @@
 			<posy>85</posy>
 			<width>1106</width>
 			<height>538</height>
-			<onleft>2</onleft>
-			<onright>60</onright>
+			<onleft></onleft>
+			<onright></onright>
 			<onup>50</onup>
 			<ondown>50</ondown>
 			<viewtype label="535">list</viewtype>
