@@ -93,13 +93,14 @@
 				<onfocus>Skin.SetString(SkinSettings,2)</onfocus>
 				<ondown>200</ondown>
 			</control>
-			<!--<control type="button" id="93">
-				<description>Altele</description>
+			<control type="button" id="93">
+				<description>Skin Update</description>
 				<width>200</width>
 				<include>ButtonInfoDialogsCommonValues</include>
-				<label>Altele</label>
+				<label>Skin Update</label>
 				<onfocus>Skin.SetString(SkinSettings,3)</onfocus>
-			</control>-->
+				<ondown>300</ondown>
+			</control>
 		</control>
 		<control type="grouplist" id="100">
 			<description>control area</description>
@@ -347,8 +348,48 @@
 				<onclick>Skin.SetAddon(SubtitleScript_Path,xbmc.python.subtitles)</onclick>
 			</control>-->
 			
-			
+	</control>
+	
+		<control type="grouplist" id="300">
+			<description>control area</description>
+			<posx>40</posx>
+			<posy>140</posy>
+			<width>920</width>
+			<height>670</height>
+			<itemgap>-1</itemgap>
+			<pagecontrol>30</pagecontrol>
+			<onup>9</onup>
+			<ondown>9001</ondown>
+			<onleft>2</onleft>
+			<onright>30</onright>
+			<visible>Skin.String(SkinSettings,3)</visible>
+			<control type="label" id="301">
+				<height>50</height>
+				<width>920</width>
+				<font>font30_title</font>
+				<label>Skin update</label>
+				<textcolor>black</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+			</control>
+			<control type="button" id="302">
+				<description>Skin Update</description>
+				<include>ButtonInfoDialogsCommonValues</include>
+				<height>55</height>
+				<width>920</width>
+				<label>Skin update</label>
+				<font>font24_title</font>
+				<focusedcolor>white</focusedcolor>
+				<textcolor>white</textcolor>
+				<align>center</align>
+				<aligny>center</aligny>
+				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
+				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
+				<onclick>RunScript("special://skin/scripts/install_skin.py")</onclick>
+			</control>
 		</control>
+		
+		
 		<control type="scrollbar" id="30">
 			<posx>975</posx>
 			<posy>120</posy>
