@@ -2,4 +2,4 @@ import os
 import xbmc
 
 
-os.system("sudo /home/pi/install_skin");
+os.system("git clone https://github.com/idorel77/skin.CarPC-touch_carbon.git");
