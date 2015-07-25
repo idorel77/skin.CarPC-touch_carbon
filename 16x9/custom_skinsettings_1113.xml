@@ -367,7 +367,7 @@
 				<height>50</height>
 				<width>920</width>
 				<font>font30_title</font>
-				<label>Skin update</label>
+				<label>Skin update, only for RPi</label>
 				<textcolor>black</textcolor>
 				<align>center</align>
 				<aligny>center</aligny>
