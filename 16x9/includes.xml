@@ -1454,4 +1454,35 @@
         <font>font13</font>
         <focusedcolor>black</focusedcolor>
     </include>
+    <include name="Connect3g">
+	 	<control type="group" id="4295">
+	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonConnect3g)</visible>
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>285r</posx>
+            <posy>85r</posy>
+            <control type="button" id="4296">
+                <ondown>Control.SetFocus(605)</ondown>
+                <onup>Control.SetFocus(4281)</onup>
+                <onleft>Control.SetFocus(605)</onleft>
+                <onright>Control.SetFocus(4281)</onright>
+                <description>Connect 3g</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texturenofocus  border="4">floor_button_t.png</texturenofocus>
+                <texturefocus border="4">floor_buttonfo.png</texturefocus>
+                <onclick>ActivateWindow(1118)</onclick>
+            </control>
+            <control type="image">
+                <description>Connect 3g</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texture>special://skin/media/icon-3g.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+        </control>
+	</include>
 </includes>
