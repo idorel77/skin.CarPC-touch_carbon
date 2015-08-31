@@ -24,8 +24,8 @@
 			<label>$LOCALIZE[31007]</label>
 		</control>
 		<control type="group">
-			<posx>330</posx>
-			<posy>-20</posy>
+			<posx>345</posx>
+			<posy>-15</posy>
 			<include>DialogCloseButtonCommons</include>
 		</control>
 		<control type="grouplist" id="996">
