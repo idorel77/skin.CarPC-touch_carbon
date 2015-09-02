@@ -2,6 +2,8 @@ skin.CarPC-touch_carbon
 =======================
 
 skin_xbmc
+Update 2.09.2015
+- Fixed file manager and add button in home.
 
 - update 27-09-20015
 - added new page for connecting 3g. If you don't need -> Hide button from - Settings/Skin settings/settings buttons/
