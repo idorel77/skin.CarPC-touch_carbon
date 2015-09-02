@@ -70,7 +70,7 @@
             <control type="label">
                 <include>Window_OpenClose_Animation_Slide_Down</include>
                 <description>time label</description>
-                <posx>265</posx>
+                <posx>250</posx>
                 <posy>0</posy>
                 <width>350</width>
                 <height>67</height>
@@ -84,6 +84,7 @@
             </control>
         </control>
     </include>
+
     
     <!-- weather Info -->
     <include name="Weather">
@@ -727,8 +728,8 @@
                 <texturefocus>OSDNextTrackFO.png</texturefocus>
                 <texturenofocus>OSDNextTrackNF.png</texturenofocus>
                 <onleft>Control.SetFocus(603)</onleft>
-                <onright>Control.SetFocus(4291)</onright>
-                <onup>Control.SetFocus(4291)</onup>
+                <onright>Control.SetFocus(4298)</onright>
+                <onup>Control.SetFocus(4298)</onup>
                 <ondown>Control.SetFocus(603)</ondown>
                 <onclick>PlayerControl(Next)</onclick>
             </control>
@@ -911,24 +912,24 @@
             </control>
         </control>
     </include>
-    <include name="DialogCloseButtonCommons">
-        <control type="image">
-            <posx>0</posx>
-            <posy>0</posy>
-            <width>2</width>
-            <height>40</height>
-            <texture>header-divide.png</texture>
-        </control>
+    <include name="DialogCloseButtonCommons">  
         <control type="button">
             <description>Close Button</description>
-            <posx>5</posx>
+            <posx></posx>
             <posy>0</posy>
             <width>45</width>
             <height>45</height>
             <font>-</font>
             <onclick>back</onclick>
-            <texturefocus>icon_close.png</texturefocus>
-            <texturenofocus>icon_close.png</texturenofocus>
+            <texturefocus>iconback-focus.png</texturefocus>
+            <texturenofocus></texturenofocus>
+        </control>
+        <control type="image">
+            <posx>0</posx>
+            <posy>0</posy>
+            <width>45</width>
+            <height>45</height>
+            <texture>icon_close.png</texture>
         </control>
     </include>
     <include name="MediaSubMenu">
@@ -1454,4 +1455,107 @@
         <font>font13</font>
         <focusedcolor>black</focusedcolor>
     </include>
+	<include name="PointerControl">
+		<controls type="group">
+		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPointerControl)</visible>
+		<control type="image" id="1">
+			<description>Pointer Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>pointer-focus.png</texture>
+		</control>
+		<control type="image" id="2">
+			<description>Pointer Focus Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>pointer-focus.png</texture>
+		</control>
+		<control type="image" id="3">
+			<description>Pointer Drag Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>pointer-focus.png</texture>
+		</control>
+		<control type="image" id="4">
+			<description>Pointer Click Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+			<texture>pointer-focus.png</texture>
+		</control>
+	</controls>
+	</include>
+	
+	<include name="Connect3g">
+	 	<control type="group" id="4295">
+	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonConnect3g)</visible>
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>285r</posx>
+            <posy>85r</posy>
+            <control type="button" id="4296">
+                <ondown>Control.SetFocus(4298)</ondown>
+                <onup>Control.SetFocus(4291)</onup>
+                <onleft>Control.SetFocus(4298)</onleft>
+                <onright>Control.SetFocus(4291)</onright>
+                <description>Connect 3g</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texturenofocus  border="4">floor_button_t.png</texturenofocus>
+                <texturefocus border="4">floor_buttonfo.png</texturefocus>
+                <onclick>ActivateWindow(1118)</onclick>
+            </control>
+            <control type="image">
+                <description>Connect 3g</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texture>special://skin/media/icon-3g.png</texture>
+                <bordersize>12</bordersize>
+            </control>
+        </control>
+	</include>
+	
+	<include name="ButtonFileManager">
+	 	<control type="group" id="4297">
+	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonConnect3g)</visible>
+            <include>Window_OpenClose_Animation_Slide_Up</include>
+            <posx>380r</posx>
+            <posy>85r</posy>
+            <control type="button" id="4298">
+                <ondown>Control.SetFocus(605)</ondown>
+                <onup>Control.SetFocus(4296)</onup>
+                <onleft>Control.SetFocus(605)</onleft>
+                <onright>Control.SetFocus(4296)</onright>
+                <description>Connect 3g</description>
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>82</width>
+                <height>82</height>
+                <texturenofocus  border="4">floor_button_t.png</texturenofocus>
+                <texturefocus border="4">floor_buttonfo.png</texturefocus>
+                <onclick>ActivateWindow(3)</onclick>
+            </control>
+            <control type="label">
+                <posx>0</posx>
+                <posy>0</posy>
+                <width>80</width>
+                <height>80</height>
+                <align>center</align>
+                <aligny>center</aligny>
+                <label>Files</label>
+                <textcolor>white</textcolor>
+                <font>font24</font>
+            </control>
+        </control>
+	</include>
 </includes>
