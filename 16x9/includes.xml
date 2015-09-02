@@ -1455,66 +1455,18 @@
         <font>font13</font>
         <focusedcolor>black</focusedcolor>
     </include>
-<<<<<<< HEAD
-	<include name="PointerControl">
-		<controls type="group">
-		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPointerControl)</visible>
-		<control type="image" id="1">
-			<description>Pointer Image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<texture>pointer-focus.png</texture>
-		</control>
-		<control type="image" id="2">
-			<description>Pointer Focus Image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<texture>pointer-focus.png</texture>
-		</control>
-		<control type="image" id="3">
-			<description>Pointer Drag Image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<texture>pointer-focus.png</texture>
-		</control>
-		<control type="image" id="4">
-			<description>Pointer Click Image</description>
-			<posx>0</posx>
-			<posy>0</posy>
-			<width>32</width>
-			<height>32</height>
-			<texture>pointer-focus.png</texture>
-		</control>
-	</controls>
-	</include>
 	
 	<include name="Connect3g">
-=======
-    <include name="Connect3g">
->>>>>>> origin/master
 	 	<control type="group" id="4295">
 	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonConnect3g)</visible>
             <include>Window_OpenClose_Animation_Slide_Up</include>
             <posx>285r</posx>
             <posy>85r</posy>
             <control type="button" id="4296">
-<<<<<<< HEAD
                 <ondown>Control.SetFocus(4298)</ondown>
                 <onup>Control.SetFocus(4291)</onup>
                 <onleft>Control.SetFocus(4298)</onleft>
                 <onright>Control.SetFocus(4291)</onright>
-=======
-                <ondown>Control.SetFocus(605)</ondown>
-                <onup>Control.SetFocus(4281)</onup>
-                <onleft>Control.SetFocus(605)</onleft>
-                <onright>Control.SetFocus(4281)</onright>
->>>>>>> origin/master
                 <description>Connect 3g</description>
                 <posx>0</posx>
                 <posy>0</posy>
@@ -1535,11 +1487,10 @@
             </control>
         </control>
 	</include>
-<<<<<<< HEAD
 	
-	<include name="ButtonFileManager">
+	<include name="FileManager">
 	 	<control type="group" id="4297">
-	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonConnect3g)</visible>
+	 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonFileManager)</visible>
             <include>Window_OpenClose_Animation_Slide_Up</include>
             <posx>380r</posx>
             <posy>85r</posy>
@@ -1571,6 +1522,3 @@
         </control>
 	</include>
 </includes>
-=======
-</includes>
->>>>>>> origin/master

@@ -163,19 +163,6 @@
 				<onclick>Skin.ToggleSetting(HideHomeButtonTime)</onclick>
 				<selected>!Skin.HasSetting(HideHomeButtonTime)</selected>
 			</control>
-			<control type="radiobutton" id="206">
-				<description>Connect3g</description>
-				<height>55</height>
-				<width>920</width>
-				<font>font24_title</font>
-				<focusedcolor>blue</focusedcolor>
-				<textcolor>black</textcolor>
-				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
-				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<label>Show Connect3g Button</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonConnect3g)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonConnect3g)</selected>
-			</control>
 			<!--<control type="radiobutton" id="104">
 				<description>Hide TVShows</description>
 				<height>55</height>
@@ -339,7 +326,7 @@
 				<selected>!Skin.HasSetting(HideHomeButtonFavourites)</selected>
 			</control>
 			<control type="radiobutton" id="205">
-				<description>Pointer</description>
+				<description>File Manager</description>
 				<height>55</height>
 				<width>920</width>
 				<font>font24_title</font>
@@ -347,9 +334,9 @@
 				<textcolor>black</textcolor>
 				<texturefocus border="0,2,0,2">MenuItemNF.png</texturefocus>
 				<texturenofocus border="0,2,0,2">MenuItemNF.png</texturenofocus>
-				<label>Show Pointer</label>
-				<onclick>Skin.ToggleSetting(HideHomeButtonPointerControl)</onclick>
-				<selected>!Skin.HasSetting(HideHomeButtonPointerControl)</selected>
+				<label>Show Button File Manager</label>
+				<onclick>Skin.ToggleSetting(HideHomeButtonFileManager)</onclick>
+				<selected>!Skin.HasSetting(HideHomeButtonFileManager)</selected>
 			</control>
 			<control type="radiobutton" id="206">
 				<description>Connect3g</description>

@@ -263,9 +263,9 @@
             <posx>190r</posx>
             <posy>85r</posy>
             <control type="button" id="4291">
-                <ondown>Control.SetFocus(605)</ondown>
+                <ondown>Control.SetFocus(4296)</ondown>
                 <onup>Control.SetFocus(4281)</onup>
-                <onleft>Control.SetFocus(605)</onleft>
+                <onleft>Control.SetFocus(4296)</onleft>
 				<onright>Control.SetFocus(4281)</onright>
                 <description>Settings Button</description>
                 <posx>0</posx>
@@ -286,7 +286,7 @@
                 <bordersize>12</bordersize>
             </control>
         </control>
-        <include>ButtonFileManager</include>
+        <include>FileManager</include>
         <include>Connect3g</include>
         <include>BehindDialogFadeOut</include>
     </controls>	
