@@ -286,7 +286,8 @@
                 <bordersize>12</bordersize>
             </control>
         </control>
-       <include>Connect3g</include>
+        <include>ButtonFileManager</include>
+        <include>Connect3g</include>
         <include>BehindDialogFadeOut</include>
     </controls>	
 </window>
