@@ -48,9 +48,9 @@
 			<scrolltime>200</scrolltime>
 			<itemlayout height="40">
 				<control type="label">
-					<posx>250</posx>
+					<posx>0</posx>
 					<posy>0</posy>
-					<width>550</width>
+					<width>250</width>
 					<height>40</height>
 					<font>font13_title</font>
 					<align>right</align>
@@ -60,7 +60,7 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<posx>260</posx>
+					<posx>270</posx>
 					<posy>0</posy>
 					<width>670</width>
 					<height>40</height>
@@ -74,9 +74,9 @@
 			</itemlayout>
 			<focusedlayout height="40">
 				<control type="label">
-					<posx>250</posx>
+					<posx>0</posx>
 					<posy>0</posy>
-					<width>550</width>
+					<width>250</width>
 					<height>40</height>
 					<font>font13_title</font>
 					<align>right</align>
@@ -86,7 +86,7 @@
 					<info>ListItem.Label</info>
 				</control>
 				<control type="label">
-					<posx>260</posx>
+					<posx>270</posx>
 					<posy>0</posy>
 					<width>670</width>
 					<height>40</height>
