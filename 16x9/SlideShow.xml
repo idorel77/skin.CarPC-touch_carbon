@@ -18,7 +18,7 @@
 			<include>CommonHeader</include>
 			<control type="image">
 				<posx>0</posx>
-				<posy>20</posy>
+				<posy>0</posy>
 				<width>ScreenWidth</width>
 				<height>64</height>
 				<texture>header.png</texture>
@@ -26,7 +26,7 @@
 			<control type="grouplist">
 				<description>Top Left bar</description>
 				<posx>0</posx>
-				<posy>20</posy>
+				<posy>0</posy>
 				<width>200</width>
 				<height>64</height>
 				<align>left</align>
@@ -118,7 +118,7 @@
 					<width>60</width>
 					<height>60</height>
 					<font>-</font>
-					<onclick>Skin.Reset(SlideShowShowOSD)</onclick>
+					<onclick>back</onclick>
 					<texturefocus>icon_close.png</texturefocus>
 					<texturenofocus>icon_close.png</texturenofocus>
 				</control>
