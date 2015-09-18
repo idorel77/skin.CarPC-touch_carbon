@@ -817,45 +817,78 @@
         </control>
     </include>
     <include name="ScrollBarCommons">
-        <control type="group">
-            <!--<include>Window_OpenClose_Animation</include>-->
-            <animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
-            <animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
-            <posx>75r</posx>
-            <posy>80</posy>
-            <visible>Control.IsVisible(60)</visible>
-            <animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
-            <animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
-            <control type="image">
-                <description>Scroll Bar Background Image</description>
-                <posx>0</posx>
-                <posy>0</posy>
-                <width>75</width>
-                <height>550</height>
-                <texture border="0,60,0,60">ScrollBarBackground.png</texture>
-                <colordiffuse>50FFFFFF</colordiffuse>
-            </control>
-            <control type="scrollbar" id="60">
-                <posx>15</posx>
-                <posy>30</posy>
+	<control type="group">
+		<!--<include>Window_OpenClose_Animation</include>-->
+		<animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+		<posx>75r</posx>
+		<posy>80</posy>
+		<visible>Control.IsVisible(60)</visible>
+		<animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
+		<animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
+	<control type="image">
+		<description>Scroll Bar Background Image</description>
+		<posx>0</posx>
+		<posy>0</posy>
+		<width>75</width>
+		<height>550</height>
+		<texture border="0,60,0,60">ScrollBarBackground.png</texture>
+		<colordiffuse>50FFFFFF</colordiffuse>
+	</control>			
+	<control type="scrollbar" id="60">
+		<posx>15</posx>
+                <posy>65</posy>
                 <width>37</width>
-                <height>480</height>
-                <texturesliderbackground border="0,14,0,14">linie_albastra_v.png</texturesliderbackground>
-                <texturesliderbar border="0,14,0,14">osdslidernib.png</texturesliderbar>
-                <texturesliderbarfocus border="0,14,0,14">osdslidernib.png</texturesliderbarfocus>
-                <textureslidernib></textureslidernib>
-                <textureslidernibfocus></textureslidernibfocus>
-                <onleft>50</onleft>
-                <onright>50</onright>
-                <ondown>60</ondown>
-                <onup>60</onup>
-                <showonepage>false</showonepage>
-                <orientation>vertical</orientation>
-                <animation effect="fade" time="150">Visible</animation>
-                <animation effect="fade" time="150">Hidden</animation>
-            </control>
-        </control>
-    </include>
+                <height>420</height>
+		<texturesliderbackground border="0,0,0,0">linie_albastra_v.png</texturesliderbackground>
+		<texturesliderbar border="0,14,0,14">osdslidernib.png</texturesliderbar>
+		<texturesliderbarfocus border="0,14,0,14">osdslidernib.png</texturesliderbarfocus>
+		<textureslidernib></textureslidernib>
+		<textureslidernibfocus></textureslidernibfocus>
+		<onleft>50</onleft>
+		<onright>50</onright>
+		<ondown>60</ondown>
+		<onup>60</onup>
+		<showonepage>false</showonepage>
+		<orientation>vertical</orientation>
+		<animation effect="fade" time="150">Visible</animation>
+		<animation effect="fade" time="150">Hidden</animation>
+	</control>
+	<include>ScrollButtonsCommons</include>
+     </control>	
+</include>
+    <include name="ScrollButtonsCommons">
+	<control type="group">
+		<animation effect="slide" start="200,0" end="0,0" time="500" tween="quadratic" easing="out">WindowOpen</animation>
+		<animation effect="slide" start="0,0" end="200,0" time="500" tween="quadratic" easing="out">WindowClose</animation>
+		<posx>75r</posx>
+		<posy>20</posy>
+		<visible>Control.IsVisible(60)</visible>
+		<animation effect="slide" start="90,0" end="0,0" time="400">Visible</animation>
+		<animation effect="slide" start="0,0" end="90,0" time="400">Hidden</animation>
+	<control type="button">
+                <description>Page Up</description>
+                <posx>7</posx>
+                <posy>0</posy>
+                <width>50</width>
+                <height>50</height>
+                <texturenofocus  border="4">arrow-big-up.png</texturenofocus>
+                <texturefocus border="4">arrow-big-up.png</texturefocus>
+                <onclick>PageUp</onclick>
+        </control> 
+        <control type="button">
+                <description>Page Down</description>
+                <posx>7</posx>
+                <posy>460</posy>
+                <width>50</width>
+                <height>50</height>
+                <texturenofocus  border="4">arrow-big-down.png</texturenofocus>
+                <texturefocus border="4">arrow-big-down.png</texturefocus>
+                <onclick>PageDown</onclick>
+            </control>   
+	 </control>   
+</include>
+    
     <include name="HomeButtonCommons">
         <control type="group">
             <include>Window_OpenClose_Animation_Slide_Down</include>
