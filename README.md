@@ -37,3 +37,4 @@ APN_PASS="foo"
 
 - More info: http://raspberry-at-home.com/installing-3g-modem/
 
+https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AMXESTYHM96HN
