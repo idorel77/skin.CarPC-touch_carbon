@@ -6,7 +6,7 @@
 		<posy>0</posy>
 	</coordinates>
     
-	<!--<controls type="group">
+	<controls type="group">
 		<visible>!Window.IsVisible(ExtendedProgressDialog) + !Skin.HasSetting(HideHomeButtonPointerControl)</visible>
 		<control type="image" id="1">
 			<description>Pointer Image</description>
@@ -40,6 +40,6 @@
 			<height>32</height>
 			<texture>pointer-focus.png</texture>
 		</control>
-	</controls>-->
+	</controls>
     
     </window>
